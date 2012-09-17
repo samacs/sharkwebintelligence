@@ -137,16 +137,17 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		$router->addRoute('local-marketing', $route);
 
 		// Local marketing pages
-		$route = new Zend_Controller_Router_Route(
-			'/local-marketing/:page',
+		$route = new Zend_Controller_Router_Route_Regex(
+			'local-marketing/([-a-z0-9]+)',
 			array(
 				'module' => 'default',
 				'controller' => 'localmarketing',
 				'action' => 'view',
 			),
 			array(
-				'page' => '\w',
-				)
+				1 => 'page',
+			),
+			'local-marketing/%s'
 		);
 		$router->addRoute('local-marketing-pages', $route);
 

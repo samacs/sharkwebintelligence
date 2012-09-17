@@ -10,6 +10,10 @@
 			<label>Acerca</label>
 			<title>Acerca</title>
 			<uri>/about</uri>
+			<route>pages</route>
+			<params>
+				<page>quienes-somos</page>
+			</params>
 			<pages>
 				<aboutus>
 					<label>¿Quienes Somos?</label>
@@ -90,7 +94,7 @@
 						<service>analisis-web</service>
 					</params>
 				</web_analytics>
-				
+
 				<!-- <email_marketing>
 					<label>Campañas por correo</label>
 					<title>Manejo de publicidad campañas por correo</title>
@@ -171,7 +175,7 @@
 			<label>Blog</label>
 			<title>Blog</title>
 			<route>blog</route>
-		</blog> --> 
+		</blog> -->
 		<local_marketing>
 			<title>Local Marketing</title>
 			<label>Local Marketing</label>

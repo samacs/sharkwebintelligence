@@ -37,7 +37,7 @@ class Shark_View_Helper_TwitterBootstrapMenu extends Zend_View_Helper_Abstract {
 			$itemClasses[] = 'active';
 		}
 		if ($hasSubItems) {
-			$href = '#';
+			//$href = '#';
 			$itemClasses[] = 'haschild';
 			$linkClasses[] = 'haschild';
 		}
@@ -87,7 +87,7 @@ class Shark_View_Helper_TwitterBootstrapMenu extends Zend_View_Helper_Abstract {
 			$itemClasses[] = 'active';
 		}
 		if ($hasSubItems) {
-			$href = '#';
+			//$href = '#';
 			$itemClasses[] = 'dropdown';
 			$linkClasses[] = 'dropdown-toggle';
 			$dataAttributes['toggle'] = 'dropdown';
