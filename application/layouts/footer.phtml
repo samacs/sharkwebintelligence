@@ -1,0 +1,81 @@
+<div id="brief" class="span3">
+	<div class="box">
+		<h5>Síguenos en Facebook</h5>
+		<div class="fb-like-box" data-href="https://www.facebook.com/becomeashark" data-width="205" data-height="300" data-show-faces="true" data-stream="false" data-header="false"></div>
+	</div>
+</div>
+<div id="newsletter" class="span3">
+	<div class="box">
+		<h5>Newsletter</h5>
+		<p>Suscr&iacute;bete a nuestra lista de correos y mantente al tanto de nuestros proyectos.</p>
+		<form id="form_newsletter" class="form-inline">
+			<fieldset>
+				<input type="text" class="input-medium" placeholder="Your email">
+				<button type="submit" class="btn">Sign up</button>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<div id="contact-info" class="span3" itemscope itemtype="http://schema.org/Place">
+	<div class="box">
+		<h5>Contact info</h5>
+		<div class="vcard" itemprop="address">
+			<p class="fn"><?= $this->title ?></p>
+			<p class="adr" itemscope itemtype="http://schema.org/PostalAddress">
+				<span class="street-address" itemprop="streetAddress">Alfonso Iberri #242</span>
+				<span class="locality" itemprop="addressLocality">Guaymas</span>,
+				<span class="region" itemprop="addressRegion">Sonora</span>
+				<span class="postal-code" itemprop="postalCode">85400</span>
+				<span class="country" itemprop="addressCountry">M&eacute;xico</span>
+				<span class="tel" itemprop="telephone">Tel: <span class="value">(622)-222-8633</span></span>
+			</p>
+		</div>
+	</div>
+</div>
+<div id="social-stream" class="span3">
+	<div class="box">
+		<h5>Social stream</h5>
+		<div id="social-stream-container">
+			<?= $this->twitterStream('becomeashark', 1) ?>
+		</div>
+		<ul class="social-icons">
+			<li class="twitter">
+				<img src="<?= $this->baseUrl('/img/twitter.png') ?>" alt="Twitter" width="16" height="16">
+				<a href="http://twitter.com/becomeashark" title="Become a Shark">Become a Shark</a>
+			</li>
+			<li class="facebook">
+				<img src="<?= $this->baseUrl('/img/facebook.png') ?>" alt="Facebook" width="16" height="16">
+				<a href="http://facebook.com/becomeashark" title="Shark Web Intelligence">Shark Web Intelligence</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="span12 hr">
+</div>
+<div id="copyright" class="span8">
+	<p>Copyright &copy; <?= Zend_Date::now()->toString(Zend_Date::YEAR) ?> <strong><?= $this->title ?></strong>. All rights reserved.
+</div>
+<div id="footnav" class="span4">
+	<div class="pull-right">
+		<?= $this->twitterBootstrapMenu('footnav', 'list') ?>
+	</div>
+</div>
+<div class="span12">
+	<ul id="standards" class="pull-right">
+		<li>
+			<a href="<?= $this->baseUrl('/humans.txt') ?>" title="Detrás del sitio">
+				<img src="<?= $this->baseUrl('/img/humanstxt-isolated-blank.gif') ?>" alt="Detrás del sitio" width="88" height="31">
+			</a>
+		</li>
+		<li>
+			<a href="http://validator.w3.org/check?uri=<?= $this->absoluteUrl() ?>" title="HTML5 válido">
+				<img src="<?= $this->baseUrl('/img/valid-html5.png') ?>" alt="HTML5 válido" width="88" height="31">
+			</a>
+		</li>
+		<li>
+			<a href="http://jigsaw.w3.org/css-validator/validator?uri=<?= $this->absoluteUrl('/skins/' . $this->skin . '/screen.css')	 ?>" title="CSS3 válido">
+				<img src="<?= $this->baseUrl('/img/valid-css3.png') ?>" alt="CSS3 válido" width="88" height="31">
+			</a>
+		</li>
+	</ul>
+</div>

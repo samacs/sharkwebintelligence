@@ -1,0 +1,32 @@
+<?
+/**
+ * Title
+ */
+$this->headTitle('¿Quiénes somos?');
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', 'Shark Web Intelligence');
+$this->headMeta()->setName('description', 'Acerca de Shark Web Intelligence.');
+?>
+<div class="span12">
+	<div class="jumbo">
+		<h1>¿Quienes somos?</h1>
+		<h2>conoce nuestra empresa</h2>
+	</div>
+</div>
+<div class="span3 sidebar left">
+	<?= $this->twitterBootstrapMenu('mainnav', 'list', 'Acerca') ?>
+	<p id="brochure">
+		<a href="<?= $this->baseUrl('/files/sharkwebintelligence-brochure.pdf') ?>" title="Download our brochure">
+			Descarga nuestro triptico
+		</a>
+	</p>
+</div>
+<div class="span9 content right">
+	<div class="span9 last">
+		<!-- <img src="<?= $this->baseUrl('/img/about/about-shark.jpg') ?>" class="full-width" alt="Conocenos" >-->
+		<p>Creemos en la tecnología como medio para alcanzar objetivos de organizaciones y causas. La comunicación eficaz provee soluciones integrales. Trabajamos con pasión y entrega trastocando los límites de la creatividad con el fin de satisfacer las necesidades de nuestros clientes. Ofrecemos servicios de inteligencia web para sus desarrollos. Creamos, desarrollamos e implementamos estrategias y contenidos para posicionar su nombre y su marca e influir entre sus potenciales clientes. Somos Shark Web Intelligence. ¿Qué esperas para iniciar ese proyecto que tienes en mente?.</p>
+		<img src="<?= $this->baseUrl('/img/about/about-shark.jpg') ?>" class="full-width" alt="Conocenos" >
+	</div>
+</div>

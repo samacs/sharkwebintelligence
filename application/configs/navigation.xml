@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+	<mainnav>
+		<home>
+			<label>Inicio</label>
+			<title>Shark Web Intelligence</title>
+			<route>default</route>
+		</home>
+		<about>
+			<label>Acerca</label>
+			<title>Acerca</title>
+			<uri>/about</uri>
+			<pages>
+				<aboutus>
+					<label>¿Quienes Somos?</label>
+					<title>Acerca de Shark Web Intelligence</title>
+					<route>pages</route>
+					<params>
+						<page>quienes-somos</page>
+					</params>
+				</aboutus>
+				<team>
+					<label>El equipo</label>
+					<title>Conoce a nuestro equipo</title>
+					<route>pages</route>
+					<params>
+						<page>el-equipo</page>
+					</params>
+				</team>
+			<!--	<clients>
+					<label>Clientes</label>
+					<title>Conoce a nuestros clientes</title>
+					<route>pages</route>
+					<params>
+						<page>los-clientes</page>
+					</params>
+				</clients> -->
+			</pages>
+		</about>
+		<services>
+			<label>Servicios</label>
+			<title>Nuestros servicios</title>
+			<uri>/servicios</uri>
+			<pages>
+				<services_overview>
+					<label>Visión general</label>
+					<title>Conoce nuestros servicios</title>
+					<route>pages</route>
+					<params>
+						<page>servicios</page>
+					</params>
+				</services_overview>
+				<!--<web_hosting>
+					<label>Hospedaje web</label>
+					<title>Hospedaje web</title>
+					<route>services</route>
+					<params>
+						<service>hospedaje-web</service>
+					</params>
+				</web_hosting> -->
+				<web_design>
+					<label>Diseño web</label>
+					<title>Diseño web</title>
+					<route>services</route>
+					<params>
+						<service>diseno-web</service>
+					</params>
+				</web_design>
+				<web_development>
+					<label>Desarrollo web</label>
+					<title>Desarrollo web</title>
+					<route>services</route>
+					<params>
+						<service>desarrollo-web</service>
+					</params>
+				</web_development>
+				<social_networking>
+					<label>Redes sociales</label>
+					<title>Manejo de redes sociales</title>
+					<route>services</route>
+					<params>
+						<service>redes-sociales</service>
+					</params>
+				</social_networking>
+				<web_analytics>
+					<label>Análisis web</label>
+					<title>Análisis web</title>
+					<route>services</route>
+					<params>
+						<service>analisis-web</service>
+					</params>
+				</web_analytics>
+				
+				<!-- <email_marketing>
+					<label>Campañas por correo</label>
+					<title>Manejo de publicidad campañas por correo</title>
+					<route>services</route>
+					<params>
+						<service>email-marketing</service>
+					</params>
+				</email_marketing>
+				<price_table>
+					<label>Precios</label>
+					<title>Tabla de precios</title>
+					<route>pages</route>
+					<params>
+						<page>precios</page>
+					</params>
+				</price_table> -->
+			</pages>
+		</services>
+		<portfolio>
+			<label>Portafolio</label>
+			<title>Portafolio</title>
+			<route>pages</route>
+			<params>
+				<page>portafolio</page>
+			</params>
+			<pages>
+				<periodico_expreso>
+					<label>Periódico Expreso</label>
+					<title>Periódico Expreso</title>
+					<route>clients</route>
+					<params>
+						<client>periodico-expreso</client>
+					</params>
+				</periodico_expreso>
+				<azteca_sonora>
+					<label>Azteca Sonora</label>
+					<title>Azteca Sonora</title>
+					<route>clients</route>
+					<params>
+						<client>azteca-sonora</client>
+					</params>
+				</azteca_sonora>
+				<verano_con_coki>
+					<label>Verano con Coki</label>
+					<title>Campamento Verano con Coki</title>
+					<route>clients</route>
+					<params>
+						<client>verano-con-coki</client>
+					</params>
+				</verano_con_coki>
+				<global_pezk>
+					<label>Global Pezk</label>
+					<title>Global Pezk</title>
+					<route>clients</route>
+					<params>
+						<client>global-pezk</client>
+					</params>
+				</global_pezk>
+				<all_dental>
+					<label>All Dental</label>
+					<title>All Dental</title>
+					<route>clients</route>
+					<params>
+						<client>all-dental</client>
+					</params>
+				</all_dental>
+				<baja_salads>
+					<label>Baja Salads</label>
+					<title>Baja Salads Deli Express</title>
+					<route>clients</route>
+					<params>
+						<client>baja-salads</client>
+					</params>
+				</baja_salads>
+			</pages>
+		</portfolio>
+		<!--<blog>
+			<label>Blog</label>
+			<title>Blog</title>
+			<route>blog</route>
+		</blog> --> 
+		<local_marketing>
+			<title>Local Marketing</title>
+			<label>Local Marketing</label>
+			<route>local-marketing</route>
+			<!-- Si no le indico ningún parámetros, va a tomar la página por defecto, que sería localmarketing/index.phtml. -->
+			<pages>
+				<!-- Aquí se indican las sub páginas de top menú local_marketing. -->
+				<que_es>
+					<title>¿Qué es?</title>
+					<label>¿Qué es?</label>
+					<route>local-marketing-pages</route>
+					<params>
+						<page>que-es</page> <!-- Esta página correspondería a la página localmarketing/pages/que-es.phtml. -->
+					</params>
+				</que_es>
+				<!--
+				Quita los bloques de comentarios si quieres agregar otra sub página.
+				En este caso habría que agregar el archivo localmarketing/pages/como-funciona.phtml.
+				-->
+				<!--
+				<como_funciona>
+					<title>¿Cómo funciona?</title>
+					<label>¿Cómo funciona?</label>
+					<route>local-marketing</route>
+					<params>
+						<page>como-funciona</page>
+					</params>
+				</como_funciona>
+				-->
+			</pages>
+		</local_marketing>
+		<contact>
+			<label>Contacto</label>
+			<title>Contáctenos</title>
+			<route>pages</route>
+			<params>
+				<page>contacto</page>
+			</params>
+		</contact>
+	</mainnav>
+	<footnav>
+		<terms_of_use>
+			<label>Términos de uso</label>
+			<title>Términos de uso</title>
+			<route>pages</route>
+			<params>
+				<page>terminos-de-uso</page>
+			</params>
+		</terms_of_use>
+		<privacy_policy>
+			<label>Políticas de privacidad</label>
+			<title>Políticas de privacidad</title>
+			<route>pages</route>
+			<params>
+				<page>políticas-de-privacidad</page>
+			</params>
+		</privacy_policy>
+	</footnav>
+</configdata>

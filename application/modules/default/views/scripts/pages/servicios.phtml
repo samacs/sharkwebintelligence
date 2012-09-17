@@ -1,0 +1,25 @@
+<?
+/**
+ * Title
+ */
+$this->headTitle('Servicios');
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', 'Shark Web Intelligence');
+$this->headMeta()->setName('description', 'Nuestros servicios.');
+?>
+<div class="span12">
+	<div class="jumbo">
+		<h1>Servicios</h1>
+		<h2>Conozca nuestros servicios</h2>
+	</div>
+</div>
+<div class="span3 sidebar left">
+	<?= $this->twitterBootstrapMenu('mainnav', 'list', 'Servicios') ?>
+</div>
+<div class="span9 content right" id="services-overview">
+	<div class="row">
+		<?= $this->services() ?>
+	</div>
+</div>

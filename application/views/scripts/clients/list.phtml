@@ -1,0 +1,8 @@
+<?
+$i = 1;
+foreach ($this->clients as $client) :
+	echo $this->partialLoop('clients/_item.phtml', array('object' => $client));
+	if ($i === $this->count)
+		break;
+	$i++;
+endforeach ?>

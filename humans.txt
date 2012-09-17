@@ -1,0 +1,55 @@
+
+
+                                                 N88OZZZZOD 
+                                          NDOZZZZZZZZOZZ8   
+                                        DOZZZZZZO8DN DZ8    
+                                   N8ZZZZZODN      NZZN     
+                                8ZZZZO8N          8Z8       
+                              DOZZZZD            DZO        
+                           DZZZZON              OZD         
+                         NOZZZOD               8ZO          
+                       DZZZZ8                 OZ8           
+                     OZZZZD                  OZ8            
+                   NOZZZZD                  DZZ             
+                 NZZZZZD                   NZZN             
+               NZZZZZ8                    NZZD              
+              NZZZZZO                     DZZ               
+             OZZZZZD                      OZ8               
+            OZZZZZ8                      NZZD               
+          DZZZZZZ8                       DZZN               
+         OZZZZZZD                        DZZ                
+        8ZZZZZZZ                         DZZ                
+       OZZZZZZZN                         NZZD               
+     NOZZZZZZZ8                           DZO               
+    NOZZZZZZZZN                            ZZN              
+   NOZZZZZZZZD                              OZN             
+   8ZZZZZZZZZN                              NOO             
+  DZZZZZZZZZO                                 NZD           
+ 8OZZZZZZZZZD                                    DD         
+DOZZZZZZZZZZN                                      N        
+OZZZZZZZZZZO                                                
+OOOOOOOOOOO8                                                
+
+         Shark Web Intelligence - Become a Shark
+
+/* TEAM */
+	
+	/* COPYWRITING */
+
+	CEO & Content Creator: David Herrerav
+	Twitter: @dherrerav
+	From: Guaymas, Sonora, México
+
+	/* DEVELOPMENT */
+
+	CTO & Web developer: Saul Martínez
+	Twitter: @samacs
+	From: Hermosillo, Sonora, México
+
+/* SITE */
+	Last update: 2012/07/05
+	Language: Spanish
+	Doctype: HTML5
+	Standards: HTML5, CSS3, humans.txt
+	Components: Zend Framework, jQuery, Twitter Bootstrap
+	Software: Sublime Text, Photoshop, git

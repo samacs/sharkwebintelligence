@@ -1,0 +1,3 @@
+<? foreach ($this->projects as $project) : ?>
+<?= $this->partialLoop('projects/_item.phtml', array('object' => $project)) ?>
+<? endforeach ?>

@@ -1,0 +1,14 @@
+<div class="span3" itemscope itemtype="http://schema.org/ProfessionalService">
+	<div class="box service">
+		<h5 class="<?= $this->key ?>" itemprop="name">
+			<a href="<?= $this->url($this->route, 'services') ?>" title="<?= $this->title ?>"><?= $this->title ?></a>
+		</h5>
+		<p itemprop="description"><?= $this->description ?></p>
+		<ul>
+			<? foreach ($this->features as $feature) : ?>
+			<li><?= $feature ?></li>
+			<? endforeach ?>
+		</ul>
+		<a class="more-link" href="<?= $this->url($this->route, 'services') ?>" title="<?= $this->title ?>">Leer m&aacute;s</a>
+	</div>
+</div>

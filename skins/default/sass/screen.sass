@@ -1,0 +1,749 @@
+@import compass/reset
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700)
+
+$block-background-color: #f9f9f9
+$link-color: #346b8e
+$wrapper-background: #d8d7d3 url(../images/wrapper-background.png) repeat top left
+$text-color: #555
+$container-desktop-width: 1000px
+$container-wide-width: 1170px + 120px
+
+*
+	margin: 0
+	padding: 0
+
+html
+	overflow: auto
+body,
+p
+	font: 13px 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+	font-weight: 400
+	color: $text-color
+
+img.full-width
+	width: 100%
+
+ul
+	margin-left: 0
+
+.sidebar
+	padding-top: 20px
+	p#brochure
+		padding: 15px 10px 10px 65px
+		background: url(/img/pdf.png) no-repeat 5px 12px
+		min-height: 48px
+		a
+			display: block
+		a:hover
+			text-decoration: none
+
+.content
+	padding-top: 20px
+	[class*="span"]
+		margin-left: 0
+		margin-right: 20px
+	[class*="span"].last
+		margin-right: 0
+	p
+		margin-bottom: 20px
+		line-height: 1.8em
+	.hr
+		width: 100%
+	h4
+		font-size: 14px
+		font-weight: bold
+		margin-bottom: 20px
+	h5
+		font-size: 13px
+		font-weight: bold
+		margin-bottom: 20px
+
+ul.checklist
+	float: left
+	list-style-image: url(/img/tick.png)
+	list-style-type: circle
+	list-style-position: outside
+	margin-bottom: 20px
+	margin-left: 20px
+	li
+		p
+			padding-left: 20px
+
+blockquote
+	padding: 1px 20px 5px 60px
+	background: url(/img/blockquote.png) no-repeat top left
+	p
+		line-height: 24px
+		font-size: 1em
+		color: #999
+		margin-bottom: 20px
+		span.author
+			color: #666
+blockquote,
+p
+	quotes: """"
+	strong
+		color: #333
+
+strong
+	color: #333
+	font-weight: bold
+
+#wrapper
+	background: $wrapper-background
+	#page
+		width: $container-desktop-width
+		margin: 0 auto
+		background: white
+		box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2)
+		//-webkit-box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2)
+		//-khtml-box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2)
+		//-moz-box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2)
+		//-ms-box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2)
+		//-o-box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2)
+		.wrap
+			padding: 0 60px
+a
+	color: $link-color
+
+a.more-link
+	border-bottom: 1px dotted #e6e6e6
+	padding-bottom: 5px
+
+.jumbo
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+		font-weight: bold
+		font-family: 'Lato', sans-serif
+	h1
+		font-size: 24px
+	h2
+		font-size: 14px
+
+.header
+	padding-top: 30px
+	margin-bottom: -1px
+	#logo
+		float: left
+		h3
+			width: 205px
+			height: 70px
+			a
+				background: url(/img/logo.png) no-repeat top left
+				display: block
+				width: 205px
+				height: 70px
+				span
+					visibility: hidden
+
+.carousel
+	margin-bottom: 0
+	img
+		width: 100%
+	a.carousel-control
+		opacity: 1
+		-webkit-transition: all 1s ease-in-out
+		-moz-transition: all 1s ease-in-out
+		-o-transition: all 1s ease-in-out
+		-ms-transition: all 1s ease-in-out
+		transition-property: all
+		transition-duration: 1s
+		transition-timing-function: ease-in-out
+	.carousel-caption
+		h4
+			font-size: 14px
+			font-weight: bold
+
+.carousel:hover
+	a.carousel-control
+		opacity: 1
+
+.jumbo
+	width: 100%
+	float: left
+	border-top: 1px solid #f0f0f0
+	border-bottom: 1px solid #f0f0f0
+	margin: 0 -60px 0 -60px
+	padding: 30px 60px
+	background: #f9f9f9
+
+#main-carousel
+	//width: 100%
+	//float: left
+	//border-top: 1px solid #f0f0f0
+	//border-bottom: 1px solid #f0f0f0
+	//margin: 0 -60px 0 -60px
+	//padding: 30px 60px
+	//background: #f9f9f9#
+
+#services
+	float: left
+	padding: 30px 0
+	width: 100%
+#services-overview
+	padding-top: 20px
+	float: left
+	.span9
+		margin-left: 0
+.service
+	margin-bottom: 20px
+	h5
+		text-transform: uppercase
+		padding-left: 30px
+		min-height: 20px
+		line-height: 20px
+		vertical-align: middle
+		margin-bottom: 8px
+		font-family: 'Lato', sans-serif
+		font-weight: bold
+		font-size: 14px
+		background-repeat: no-repeat
+		background-size: 20px 20px
+		background-position: top left
+		a
+			text-decoration: none
+		a:hover
+			text-decoration: none
+	.web-hosting
+		background-image: url(/img/web-hosting.png)
+	.web-design
+		background-image: url(/img/web-design.png)
+	.web-development
+		background-image: url(/img/web-development.png)
+	.email-marketing
+		background-image: url(/img/email-marketing.png)
+	p
+		margin-bottom: 20px
+		padding-right: 10px
+	ul
+		list-style-type: none
+		list-style-position: outside
+		margin-bottom: 20px
+		list-style: none
+		border-top: 1px dotted #f0f0f0
+		li
+			border-bottom: 1px dotted #f0f0f0
+			padding: 5px
+
+.heading
+	h3
+		font-family: 'Lato', sans-serif
+		font-size: 14px
+		font-weight: bold
+		line-height: 15px
+		margin: 0 0 30px 0
+		text-transform: uppercase
+
+#team
+	h3
+		font-size: 14px
+		font-weight: bold
+		margin-bottom: 10px
+	.team-social
+		img.profile
+			border: 1px solid #ddd
+			padding: 3px
+		ul
+			margin-top: 10px
+			margin-left: 45px
+			margin-bottom: 20px
+			li
+				display: inline-block
+				margin-right: 10px
+
+#price-table
+	table
+		thead
+			th
+				padding: 10px 15px
+				text-align: center
+				text-transform: uppercase
+				.heading
+					font-family: 'Lato', sans-serif
+					font-size: 18px
+					font-weight: bold
+					line-height: 22px
+					display: block
+				sup
+					top: 0
+		tbody
+			td
+				padding: 10px 15px
+				text-align: center
+			td.feature
+				text-align: right
+		tfoot
+			td
+				text-align: center
+
+.preview
+	position: relative
+	width: 100%
+	margin-bottom: 20px
+	img
+		min-width: 100%
+	.options
+		background: transparent
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		top: 0
+		.lightbox
+			display: block
+			position: absolute
+			bottom: 10px
+			right: 37px
+			width: 26px
+			height: 26px
+			background: url(/img/preview-options.png) no-repeat 0 0
+			text-indent: -9999px
+			cursor: pointer
+			opacity: 0.8
+		.view
+			display: block
+			position: absolute
+			bottom: 10px
+			right: 10px
+			width: 28px
+			height: 26px
+			background: url(/img/preview-options.png) no-repeat 0 -82px
+			text-indent: -9999px
+			cursor: pointer
+			opacity: 0.8
+	p
+		margin-bottom: 0
+
+.box
+	h3
+		font-size: 14px
+		font-weight: bold
+		margin-bottom: 20px
+
+#clients
+	width: 100%
+	float: left
+	margin-bottom: 20px
+	p
+		margin-bottom: 20px
+
+#clients-list
+	#full-clients-list
+		ul
+			float: left
+			margin-bottom: 20px
+			li
+				padding: 10px 0
+
+#projects
+	width: 100%
+	float: left
+	margin-bottom: 20px
+	p
+		margin-bottom: 20px
+
+#social-stream
+	#social-stream-container
+		background-size: 100%
+		padding-bottom: 15px
+		ul
+			display: table
+			padding: 10px
+			border: 1px solid #ddd
+			background-color: white
+			min-height: 84px
+			li
+				display: table-cell
+				vertical-align: middle
+	.social-icons
+		li
+			display: inline-block
+			vertical-align: middle
+			padding-top: 5px
+			padding-right: 5px
+			font-size: 12px
+			img
+				display: block
+				float: left
+				margin-right: 5px
+.sidebar
+	.nav
+		list-style-type: none
+		list-style-position: outside
+		border-top: 1px solid #efefef
+		margin-bottom: 20px
+		li
+			border-bottom: 1px solid #efefef
+			a
+				display: block
+				padding: 15px 0 15px 25px
+				background: white url(/img/sidenav.gif) no-repeat 10px 17px
+				color: $link-color
+			a:hover
+				background: #F9F9F9
+		li.active
+			a
+				font-weight: bold
+				color: #333
+.header
+	.nav
+		margin-bottom: 0
+		clear: both
+		.navbar
+			margin-bottom: 0
+			color: $link-color
+			font-size: 15px
+			color: #333
+			font-family: 'Lato', sans-serif
+			float: right
+			ul.nav
+				li
+					a
+						padding: 7px 31px 30px 0
+						color: #333
+						text-shadow: none
+						display: block
+					a.active
+						color: $link-color
+					a:hover
+						color: $link-color
+					.dropdown-menu
+						left: 0
+						border-radius: 0
+						border-color: #ddd
+						padding: 0
+						margin-top: 0
+						/*display: none*/
+						li
+							a
+								padding: 5px 10px !important
+								border-bottom-width: 1px
+								border-bottom-style: solid
+								border-bottom-color: #fff
+				li:last-child
+					a
+						padding: 7px 0 30px 0
+				li:hover
+					.dropdown-menu
+						top: 55px
+						margin-top: 0
+						display: block
+						li
+							a:hover
+								background: #F9F9F9
+								border-bottom-color: #f0f0f0
+						li.active
+							a
+								color: white
+								background: $link-color
+							a:hover
+								background: $link-color
+				li.active
+					a
+						border-bottom: 1px solid #f0f0f0
+						background: white
+						color: $link-color
+					a:hover
+						color: $link-color
+			ul::before
+				border: none
+			ul::after
+				border: none
+
+
+#get-in-touch
+	p
+		margin-bottom: 20px
+
+#hosting-features
+	[class*="span"]
+		p
+			img
+				margin-right: 10px
+				float: left
+			strong
+				display: block
+				margin-bottom: 5px
+
+.footer
+	background: #f9f9f9
+	padding: 30px 0
+	border-top: 1px solid #f0f0f0
+	h5
+		font-weight: bold
+		color: #333
+		margin-bottom: 20px
+		line-height: 20px
+		text-transform: uppercase
+	#brief
+		img
+			float: left
+			margin: 0 15px
+			border: none
+			text-decoration: none
+		a
+			float: left
+			width: 100%
+			margin-bottom: 20px
+	#newsletter
+		p
+			margin-bottom: 20px
+	#contact-info
+		.vcard
+			.fn
+				font-weight: bold
+			.adr
+				.street-address
+					display: block
+					width: 100%
+				.locality
+					margin-right: 5px
+				.country
+					display: block
+					width: 100%
+	.hr
+		margin-left: 20px
+		float: left
+	#footnav
+		ul.nav
+			li
+				display: inline-block
+				margin-right: 15px
+				a
+					padding: 0 10px
+				a:hover
+					background: none
+					text-decoration: underline
+			li:last-child
+				margin-right: 0
+				a
+					padding: 0
+	#standards
+		margin-bottom: 20px
+		li
+			display: inline-block
+			padding: 0 10px
+			a
+				display: block
+
+.hr
+	border-top: 1px solid #e6e6e6
+	margin: 30px 0 30px 30px
+	float: left
+	margin-left: 0
+
+/* Portrait phone */
+@media (max-width: 320px)
+	#wrapper
+		#page
+			width: 100%
+			.wrap
+				padding: 0
+				.jumbo
+					margin: 0
+					padding: 0
+				.box
+					padding: 10px
+				#get-in-touch
+					float: left
+	#logo
+		h3
+			width: 100%
+			a
+				width: 100%
+				background-size: 100%
+	.header
+		.nav
+			width: 100%
+			ul.nav
+				padding: 10px
+				li
+					padding: inherit
+					> a
+						padding: 5px 10px !important
+	.heading
+		h3
+			margin-left: 10px
+
+
+/* Portrait iPhone */
+@media (max-width: 480px)
+	#wrapper
+		#page
+			width: 100%
+			.wrap
+				padding: 0
+				.jumbo
+					margin: 0
+					padding: 0
+				.box
+					padding: 10px
+				#get-in-touch
+					float: right
+	#logo
+		h3
+			width: 100%
+			a
+				width: 100%
+				background-size: 100%
+	.header
+		.nav
+			width: 100%
+			.navbar
+				width: 100%
+			ul.nav
+				padding: 10px
+				//background: #ddd
+				li
+					padding: inherit
+					> a
+						padding: 5px 10px !important
+	.heading
+		h3
+			margin-left: 10px
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px)
+	#wrapper
+		#page
+			width: 100%
+			.wrap
+				padding: 0
+				#get-in-touch
+					float: left
+	.header
+		.nav
+			width: 100%
+			.navbar
+				width: 100%
+			ul.nav
+				padding: 10px
+				li
+					padding: inherit
+					> a
+						padding: 5px 10px !important
+	.heading
+		h3
+			margin-left: 10px
+
+/* Tablet landscape */
+@media (max-width: 1024px)
+	#wrapper
+		#page
+			width: 100%
+			.wrap
+				padding: 0
+				.jumbo
+					padding-left: 40px
+					padding-right: 40px
+					margin-left: -40px
+					margin-right: -40px
+	.header
+		.nav
+			width: 100%
+			.navbar
+				width: 100%
+			ul.nav
+				padding: 10px
+				li
+					padding: inherit
+					> a
+						padding: 5px 10px !important
+	.heading
+		h3
+			margin-left: 10px
+
+/* Landscape phones and down */
+@media (max-width: 480px)
+	#wrapper
+		#page
+			width: 100%
+			.wrap
+				padding: 0
+				.jumbo
+					margin: 0
+					padding: 0
+				.box
+					padding: 10px
+	.header
+		.nav
+			width: 100%
+			.navbar
+				width: 100%
+			ul.nav
+				padding: 10px
+				li
+					padding: inherit
+					> a
+						padding: 5px 10px !important
+	.heading
+		h3
+			margin-left: 10px
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1024px)
+	#wrapper
+		#page
+			width: 100%
+			.wrap
+				padding: 0
+				.jumbo
+					padding-right: 40px
+					padding-left: 40px
+					margin-left: -40px
+					margin-right: -40px
+	.header
+		.nav
+			width: 100%
+			.navbar
+				width: 100%
+			ul.nav
+				padding: 10px
+				li
+					padding: inherit
+					> a
+						padding: 5px 10px !important
+
+@media (min-width: 768px) and (orientation: portrait)
+	#wrapper
+		#page
+			.wrap
+				.jumbo
+					padding-right: 20px
+					padding-left: 20px
+					margin-right: -20px
+					margin-left: -20px
+
+/* Large desktop */
+@media (min-width: 1200px)
+	#wrapper
+		#page
+			width: $container-desktop-width
+
+// Make prettyPhoto overlay responsive
+.pp_overlay
+	width: 100% !important
+
+/* @media screen and (min-width: 1200px)
+/*	.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container, .span12
+/*		width: 880px
+
+#description
+	margin: 20px 0 15px 0
+	h1
+		font-family: 'Droid Sans', sans-serif
+		font-weight: 700
+		font-size: 2.3em
+		margin-bottom: 15px
+	p
+		padding-bottom: 20px
+		font-size: 1.2em
+
+#services-web-hosting
+	h2
+		font-size: 1.8em
+		margin-bottom: 10px

@@ -1,0 +1,45 @@
+<?
+/**
+ * Title
+ */
+$this->headTitle('Azteca Sonora');
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', 'Shark Web Intelligence');
+$this->headMeta()->setName('description', 'Azteca Sonora Internet.');
+?>
+<div itemscope itemtype="http://schema.org/WebApplication">
+	<div class="span12">
+		<div class="jumbo">
+			<h1 itemprop="name">Azteca Sonora</h1>
+			<h2>Internet.</h2>
+		</div>
+	</div>
+	<div class="span3 sidebar left">
+		<?= $this->twitterBootstrapMenu('mainnav', 'list', 'Portafolio') ?>
+	</div>
+	<div class="span9 content right" id="client" itemprop="description">
+		<div class="row">
+			<div class="span6">
+				<p>Lorem ipsum do dolore mollit incididunt velit reprehenderit consectetur sint proident ullamco aliqua officia.</p>
+				<p>Lorem ipsum dolor aute anim nisi culpa quis laboris aute exercitation esse est dolore dolor nulla velit irure.</p>
+				<ul class="checklist">
+					<li>Manejador de contenidos Joomla!</li>
+					<li>Diseño de plantilla</li>
+					<li>Desarrollo de módulos, components y plugins</li>
+					<li>Posicionamiento en motores de búsqueda</li>
+				</ul>
+				<div class="clearfix"></div>
+				<p>Lorem ipsum consectetur in aliqua ut veniam mollit velit eu sed amet consequat incididunt nisi eiusmod sed dolor aliqua minim anim non id ut incididunt est.</p>
+				<p>Lorem ipsum occaecat dolore non fugiat minim sunt amet nostrud Excepteur veniam dolor velit in qui aliquip qui irure sunt non non et occaecat exercitation enim aute labore cupidatat ad dolor ea dolor incididunt in commodo esse est irure id cillum commodo. </p>
+			</div>
+			<div class="span3 thumbnail last">
+				<img src="<?= $this->absoluteUrl('img/clients/azteca-sonora-snapshot.png') ?>" alt="Azteca Sonora" width="215" height="162" itemprop="image" />
+				<div class="caption">
+					<p><strong>Azteca Sonora</strong><br /><a href="http://aztecasonora.com" target="_blank" title="Azteca Sonora" itemprop="url">http://aztecasonora.com</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

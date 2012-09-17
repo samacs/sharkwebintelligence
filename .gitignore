@@ -1,0 +1,11 @@
+data/logs/*
+data/sessions/*
+data/cache/*
+public/cached/*
+library/Zend
+.htaccess
+.sass-cache
+*php_errors.log
+*error_log
+impresoratecnica
+*php.ini

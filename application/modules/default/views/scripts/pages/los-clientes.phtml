@@ -1,0 +1,89 @@
+<?
+/**
+ * Title
+ */
+$this->headTitle('Clientes');
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', 'Shark Web Intelligence');
+$this->headMeta()->setName('description', 'Conoce a nuestros clientes.');
+?>
+<div class="span12">
+	<div class="jumbo">
+		<h1>Clientes</h1>
+		<h2>Algunos de nuestros clientes</h2>
+	</div>
+</div>
+<div class="span3 sidebar left">
+	<?= $this->twitterBootstrapMenu('mainnav', 'list', 'Acerca') ?>
+</div>
+<div class="span9 content right" id="clients-list">
+	<div class="span2">
+		<img src="<?= $this->baseUrl('/img/clients/expreso.jpg') ?>" alt="Periódico Expreso" width="160" height="60">
+	</div>
+	<div class="span7 last">
+		<blockquote>
+			<p>Donec ac cursus turpis. Vivamus vel luctus ligula. Donec ante turpis, pellentesque eget luctus a, pellentesque placerat magna. Integer in ligula elementum mi placerat sollicitudin. Phasellus varius leo vel nisi pretium pharetra. Etiam ornare quam eget nunc imperdiet varius.
+			<br />
+			<br />
+			<strong>Luis Felipe Romandía</strong>, Director General</p>
+		</blockquote>
+	</div>
+	<div class="span2 team-social">
+		<img src="<?= $this->baseUrl('/img/clients/azteca-sonora.jpg') ?>" alt="Azteca Sonora" width="160" height="60">
+	</div>
+	<div class="span7 last">
+		<blockquote>
+			<p>Donec ac cursus turpis. Vivamus vel luctus ligula. Donec ante turpis, pellentesque eget luctus a, pellentesque placerat magna. Integer in ligula elementum mi placerat sollicitudin. Phasellus varius leo vel nisi pretium pharetra. Etiam ornare quam eget nunc imperdiet varius.
+			<br />
+			<br />
+			<strong>Octavio Vizcaino</strong>, Director Operativo</p>
+		</blockquote>
+	</div>
+	<div class="hr">
+		&nbsp;
+	</div>
+	<h3>M&aacute;s clientes</h3>
+	<div class="span3">
+		<img src="<?= $this->baseUrl('/img/clients/all-dental.jpg') ?>" alt="All Dental" width="160" height="60">
+	</div>
+	<div class="span3">
+		<img src="<?= $this->baseUrl('/img/clients/global-pezk.jpg') ?>" alt="Global Pezk" width="160" height="60">
+	</div>
+	<div class="span3">
+		<img src="<?= $this->baseUrl('/img/client-logo.gif') ?>" alt="Another client" width="55" height="35">
+	</div>
+	<div class="hr">
+		&nbsp;
+	</div>
+	<h3>Todos nuestros clients</h3>
+	<div class="span9" id="full-clients-list">
+		<ul>
+			<li class="span3">
+				<a href="#" title="Paradiso Resort">Paradiso Resort</a>
+			</li>
+			<li class="span3">
+				<a href="#" title="Verano con Coki">Verano con Coki</a>
+			</li>
+			<li class="span3">
+				<a href="#" title="Another client">Another client</a>
+			</li>
+			<li class="span3">
+				<a href="#" title="Another client">Another client</a>
+			</li>
+			<li class="span3">
+				<a href="#" title="Another client">Another client</a>
+			</li>
+			<li class="span3">
+				<a href="#" title="Another client">Another client</a>
+			</li>
+			<li class="span3">
+				<a href="#" title="Another client">Another client</a>
+			</li>
+			<li class="span3">
+				<a href="#" title="Another client">Another client</a>
+			</li>
+		</ul>
+	</div>
+</div>

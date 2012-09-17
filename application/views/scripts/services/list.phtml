@@ -1,0 +1,8 @@
+<? foreach ($this->services as $service) : ?>
+<?= $this->partialLoop('services/_item.phtml', array('object' => $service)) ?>
+<? endforeach ?>
+<? $this->minifyInlineScript()->captureStart() ?>
+$(function() {
+	$('.box.service').equalHeight();
+});
+<? $this->minifyInlineScript()->captureEnd() ?>

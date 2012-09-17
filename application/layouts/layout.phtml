@@ -1,0 +1,59 @@
+<?= $this->doctype() ?>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="<?= $this->language ?>" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="<?= $this->language ?>" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="<?= $this->language ?>" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="<?= $this->language ?>" itemscope itemtype="http://schema.org/WebPage"> <!--<![endif]-->
+	<head>
+		<?= $this->headMeta() ?>
+		<meta itemprop="image" content="<?= $this->absoluteUrl('/img/logo.png') ?>">
+		<?= $this->headTitle() ?>
+		<?= $this->minifyHeadLink() ?>
+		<?= $this->headStyle() ?>
+		<?= $this->minifyHeadScript() ?>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=337534686314383";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<div id="wrapper">
+			<div id="page">
+				<header class="header">
+					<div class="wrap">
+						<div class="container">
+							<div class="row">
+								<?= $this->render('header.phtml') ?>
+							</div>
+						</div>
+					</div>
+				</header>
+				<section id="main" role="main">
+					<div class="wrap">
+						<div class="container">
+							<div class="row">
+								<?= $this->layout()->content ?>
+							</div>
+						</div>
+					</div>
+				</section>
+				<footer class="footer">
+					<div class="wrap">
+						<div class="container">
+							<div class="row">
+								<?= $this->render('footer.phtml') ?>
+								<? if (APPLICATION_ENV !== 'production') : ?>
+								<?= $this->render('debug.phtml') ?>
+								<? endif ?>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<?= $this->minifyInlineScript() ?>
+	</body>
+</html>
