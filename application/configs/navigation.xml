@@ -113,6 +113,51 @@
 				</price_table> -->
 			</pages>
 		</services>
+		
+		<!--<blog>
+			<label>Blog</label>
+			<title>Blog</title>
+			<route>blog</route>
+		</blog> -->
+		<local_marketing>
+			<title>Local Marketing</title>
+			<label>Local Marketing</label>
+			<route>local-marketing</route>
+			<!-- Si no le indico ningún parámetros, va a tomar la página por defecto, que sería localmarketing/index.phtml. -->
+			<pages>
+				<!-- Aquí se indican las sub páginas de top menú local_marketing. -->
+				<que_es>
+					<title>¿Qué es?</title>
+					<label>¿Qué es?</label>
+					<route>local-marketing-pages</route>
+					<params>
+						<page>que-es</page> <!-- Esta página correspondería a la página localmarketing/pages/que-es.phtml. -->
+					</params>
+				</que_es>
+				<como_funciona>
+					<title>Como funciona</title>
+					<label>¿Cómo Funciona?</label>
+					<route>local-marketing-pages</route>
+					<params>
+						<page>como-funciona</page>
+					</params>
+				</como_funciona>
+				<!--
+				Quita los bloques de comentarios si quieres agregar otra sub página.
+				En este caso habría que agregar el archivo localmarketing/pages/como-funciona.phtml.
+				-->
+				<!--
+				<como_funciona>
+					<title>¿Cómo funciona?</title>
+					<label>¿Cómo funciona?</label>
+					<route>local-marketing</route>
+					<params>
+						<page>como-funciona</page>
+					</params>
+				</como_funciona>
+				-->
+			</pages>
+		</local_marketing>
 		<portfolio>
 			<label>Portafolio</label>
 			<title>Portafolio</title>
@@ -171,50 +216,6 @@
 				</baja_salads>
 			</pages>
 		</portfolio>
-		<!--<blog>
-			<label>Blog</label>
-			<title>Blog</title>
-			<route>blog</route>
-		</blog> -->
-		<local_marketing>
-			<title>Local Marketing</title>
-			<label>Local Marketing</label>
-			<route>local-marketing</route>
-			<!-- Si no le indico ningún parámetros, va a tomar la página por defecto, que sería localmarketing/index.phtml. -->
-			<pages>
-				<!-- Aquí se indican las sub páginas de top menú local_marketing. -->
-				<que_es>
-					<title>¿Qué es?</title>
-					<label>¿Qué es?</label>
-					<route>local-marketing-pages</route>
-					<params>
-						<page>que-es</page> <!-- Esta página correspondería a la página localmarketing/pages/que-es.phtml. -->
-					</params>
-				</que_es>
-				<escenario>
-					<title>Escenario</title>
-					<label>Escenario</label>
-					<route>local-marketing-pages</route>
-					<params>
-						<page>escenario</page>
-					</params>
-				</escenario>
-				<!--
-				Quita los bloques de comentarios si quieres agregar otra sub página.
-				En este caso habría que agregar el archivo localmarketing/pages/como-funciona.phtml.
-				-->
-				<!--
-				<como_funciona>
-					<title>¿Cómo funciona?</title>
-					<label>¿Cómo funciona?</label>
-					<route>local-marketing</route>
-					<params>
-						<page>como-funciona</page>
-					</params>
-				</como_funciona>
-				-->
-			</pages>
-		</local_marketing>
 		<contact>
 			<label>Contacto</label>
 			<title>Contáctenos</title>
