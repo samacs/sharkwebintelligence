@@ -191,6 +191,14 @@
 						<page>que-es</page> <!-- Esta página correspondería a la página localmarketing/pages/que-es.phtml. -->
 					</params>
 				</que_es>
+				<escenario>
+					<title>Escenario</title>
+					<label>Escenario</label>
+					<route>local-marketing-pages</route>
+					<params>
+						<page>escenario</page>
+					</params>
+				</escenario>
 				<!--
 				Quita los bloques de comentarios si quieres agregar otra sub página.
 				En este caso habría que agregar el archivo localmarketing/pages/como-funciona.phtml.
