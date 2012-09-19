@@ -52,7 +52,7 @@ class Shark_View extends Zend_View {
 		$this->minifyInlineScript()->appendFile($this->baseUrl('/js/prettyPhoto/jquery.prettyPhoto.js'));
 		$this->minifyInlineScript()->appendFile($this->baseUrl('/js/application.js'));
 		$this->minifyInlineScript()->appendScript('
-				var _gaq=[["_setAccount", "' . getenv('GA') . '"],["_trackPageview"]];
+				var _gaq=[["_setAccount", "' . getenv('GA') . '"],["_trackPageview"], ["_setDomainName", "' . $this->serverUrl() . '"]];
 				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 				g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
 				s.parentNode.insertBefore(g,s)}(document,"script"));
