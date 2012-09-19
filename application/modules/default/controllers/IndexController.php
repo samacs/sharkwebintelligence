@@ -49,6 +49,8 @@ class IndexController extends Shark_Controller_Action {
         $container = new Zend_Navigation($config);
         $this->view->navigation($container);
         $this->_helper->viewRenderer->setNoRender(true);
+        $response = $this->getResponse();
+        $response->setHeader('Content-Type', 'text/xml');
         echo $this->view->navigation()->sitemap();
     }
 }
