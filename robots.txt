@@ -1,2 +1,6 @@
 UserAgent: *
-Disallow: /
+Disallow: /application
+Disallow: /data
+Disallow: /docs
+Disallow: /library
+Disallow: /min
