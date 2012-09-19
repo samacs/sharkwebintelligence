@@ -1,6 +1,8 @@
 UserAgent: *
-Disallow: /application
-Disallow: /data
-Disallow: /docs
-Disallow: /library
-Disallow: /min
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /application/
+Disallow: /data/
+Disallow: /docs/
+Disallow: /library/
+Disallow: /min/
