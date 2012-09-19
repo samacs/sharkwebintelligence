@@ -1,5 +1,4 @@
 User-Agent: *
-Allow: /
 Disallow: /cgi-bin/
 Disallow: /application/
 Disallow: /data/
