@@ -116,7 +116,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 
 		// Sitemap
 		$route = new Zend_Controller_Router_Route(
-			'/sitemap',
+			'/sitemap.xml',
 			array(
 				'module' => 'default',
 				'controller' => 'index',
