@@ -330,7 +330,7 @@ img {
 }
 #nav > .current-menu-item > a,
 #nav > li a:hover { color: #4C4C4C }
-#nav .current-menu-parent > a {
+#nav > .current-menu-item > a {
     color: #346b8e;
 }
 #nav .current-menu-item > ul > li a,
