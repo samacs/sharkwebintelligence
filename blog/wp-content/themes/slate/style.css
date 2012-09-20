@@ -373,7 +373,13 @@ img {
     border-right: solid 1px #eee;
 }
 #nav .sub-menu li:first-child { border-top: solid 1px #eee }
-#nav > li > ul { margin-top: 26px }
+#nav > li > ul {
+    margin-top: 0;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-color: #ddd;
+}
 #nav li ul li {
     border-bottom: solid 1px #eee;
     padding-bottom: 0px;
