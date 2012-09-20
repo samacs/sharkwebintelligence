@@ -64,6 +64,7 @@ body {
     height: 100%;
     color: #555;
 }
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @font-face {
     font-family: 'ModernPictogramsNormal';
     src: url('includes/fonts/pictograms/modernpics-webfont.eot');
@@ -319,7 +320,7 @@ img {
     text-align: left;
     outline: none;
     font-weight: normal;
-    font-family: "Droid Serif", Georgia ,serif;
+    font-family: "Droid Serif", Georgia, serif;
 }
 #nav > .current-menu-item > a,
 #nav > li a:hover { color: #4C4C4C }
@@ -332,7 +333,7 @@ img {
     float: left;
     position: relative;
     list-style-type: none;
-    padding-bottom: 17px;
+    padding-bottom: 26px;
 }
 #nav li a {
     font-size: 11px;
@@ -366,7 +367,7 @@ img {
     border-right: solid 1px #eee;
 }
 #nav .sub-menu li:first-child { border-top: solid 1px #eee }
-#nav > li > ul { margin-top: 17px }
+#nav > li > ul { margin-top: 26px }
 #nav li ul li {
     border-bottom: solid 1px #eee;
     padding-bottom: 0px;

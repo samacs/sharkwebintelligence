@@ -171,8 +171,8 @@ html[xmlns] .slides {
     background: #e4e4e4;
     cursor: pointer;
     text-indent: -9999px;
-    -webkit-border-radius: 30px; 
-    -moz-border-radius: 30px; 
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
     border-radius: 30px;
 }
 .flex-control-nav li a:hover {
