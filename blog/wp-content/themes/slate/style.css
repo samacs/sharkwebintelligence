@@ -377,6 +377,7 @@ img {
     -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-color: #ddd;
+    min-width: 160px;
 }
 #nav li ul li {
     border-bottom: solid 1px #eee;
