@@ -1117,42 +1117,43 @@ a.more-link {
 /*		width: 880px */
 /* line 736, ../sass/screen.sass */
 #description {
+  display: none;
   margin: 20px 0 15px 0;
 }
-/* line 738, ../sass/screen.sass */
+/* line 739, ../sass/screen.sass */
 #description h1 {
   font-family: "Droid Sans", sans-serif;
   font-weight: 700;
   font-size: 2.3em;
   margin-bottom: 15px;
 }
-/* line 743, ../sass/screen.sass */
+/* line 744, ../sass/screen.sass */
 #description p {
   padding-bottom: 20px;
   font-size: 1.2em;
 }
 
-/* line 748, ../sass/screen.sass */
+/* line 749, ../sass/screen.sass */
 #services-web-hosting h2 {
   font-size: 1.8em;
   margin-bottom: 10px;
 }
 
-/* line 753, ../sass/screen.sass */
+/* line 754, ../sass/screen.sass */
 .content h3 {
   font-size: 1.3em;
   color: #346b9e;
   line-height: 3em;
 }
-/* line 757, ../sass/screen.sass */
+/* line 758, ../sass/screen.sass */
 .content .row {
   margin-left: 0;
 }
-/* line 759, ../sass/screen.sass */
+/* line 760, ../sass/screen.sass */
 .content .row [class*="span"] {
   margin-right: 10px;
 }
-/* line 761, ../sass/screen.sass */
+/* line 762, ../sass/screen.sass */
 .content .row [class*="span"].last {
   margin-right: 0;
 }
