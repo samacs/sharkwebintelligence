@@ -51,7 +51,7 @@ h4,
 h5,
 h6 {
     font-size: 100%;
-    font-family: 'Droid Serif', Georgia, serif;
+    font-family: 'Droid Serif', "Droid Sans", serif;
     font-weight: normal;
     color: #4c4c4c;
 }
@@ -725,7 +725,7 @@ img {
     width: 190px;
     margin: 0 0 0 0;
     border: solid 1px #eaeaea;
-    font-family: Georgia, serif;
+    font-family: "Droid Sans", serif;
     -webkit-transition: .2s ease-in;
     -moz-transition: .2s ease-in;
     -o-transition: .2s ease-in;
@@ -790,7 +790,7 @@ img {
     display: block;
     line-height: 26px;
     margin: 0 0 10px 0;
-    font-family: 'Droid Serif', Georgia, serif;
+    font-family: 'Droid Serif', "Droid Sans", serif;
     text-align: center;
     background: #f7f7f7;
     color: #999;
@@ -1434,7 +1434,7 @@ h3#comments {
     display: block;
     line-height: 30px;
     margin: 0 0 15px 0;
-    font-family: 'Droid Serif', Georgia, serif;
+    font-family: 'Droid Serif', "Droid Sans", serif;
     text-align: center;
     background: #f7f7f7;
     color: #999;
@@ -1971,7 +1971,7 @@ img.alignright { margin: 5px 0 20px 20px }
 /* ===[ Contact Form 7 Styles ]===================================================== */
 
 .wpcf7 input[type="text"], .wpcf7 textarea {
-	font-family: Georgia, serif;
+	font-family: "Droid Sans", serif;
 }
 
 .wpcf7 input[type="text"] {
@@ -2030,7 +2030,7 @@ img.alignright { margin: 5px 0 20px 20px }
 .wpcf7-submit {
 	display: inline-block;
 	text-decoration: none;
-	font: bold 10px/12px Georgia, serif;
+	font: bold 10px/12px "Droid Sans", serif;
 	text-transform: uppercase;
 	padding: 8px 11px;
 	color: #555;
@@ -2179,7 +2179,7 @@ img.alignright { margin: 5px 0 20px 20px }
 .button {
     display: inline-block;
     text-decoration: none;
-    font: bold 10px/12px Georgia, HelveticaNeue, Arial;
+    font: bold 10px/12px "Droid Sans", HelveticaNeue, Arial;
     text-transform: uppercase;
     padding: 6px 11px;
     color: #555;
@@ -2449,7 +2449,7 @@ img.alignright { margin: 5px 0 20px 20px }
     padding: 5px 10px 0px 10px;
     left: 50%;
     margin-left: -58px;
-    font-family: Georgia, serif;
+    font-family: "Droid Sans", serif;
     font-size: 11px;
     color: #777;
     text-align: center;
@@ -2596,7 +2596,7 @@ img.alignright { margin: 5px 0 20px 20px }
     padding: 5px 10px 0px 10px;
     left: 50%;
     margin-left: -58px;
-    font-family: Georgia, serif;
+    font-family: "Droid Sans", serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 10px;
