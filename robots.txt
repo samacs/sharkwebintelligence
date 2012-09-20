@@ -1,8 +1,7 @@
-User-agent: *
+user-agent: *
 Disallow: /cgi-bin/
 Disallow: /application/
 Disallow: /library/
 Disallow: /data/
 Disallow: /min/
 Allow: /
-Sitemap: http://sharkwebintelligence.com/sitemap.xml
