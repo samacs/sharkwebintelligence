@@ -4,4 +4,3 @@ Disallow: /application/
 Disallow: /library/
 Disallow: /data/
 Disallow: /min/
-Allow: /
