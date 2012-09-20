@@ -326,7 +326,7 @@ img {
     text-align: left;
     outline: none;
     font-weight: normal;
-    font-family: Lato, Arial, serif;
+    font-family: "Lato", Arial, serif;
 }
 #nav > .current-menu-item > a,
 #nav > li a:hover { color: #4C4C4C }
