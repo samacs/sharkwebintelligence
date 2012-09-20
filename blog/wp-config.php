@@ -81,10 +81,12 @@ define('WPLANG', 'es_ES');
  */
 define('WP_DEBUG', false);
 
+$siteUrl = 'http://' . $_SERVER['SERVER_NAME'] . '/blog';
 /**
  * Site URL.
  */
-define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/blog');
+define('WP_SITEURL', $siteUrl);
+define('WP_HOME', $siteUrl);
 
 /* That's all, stop editing! Happy blogging. */
 
