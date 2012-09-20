@@ -333,8 +333,8 @@ img {
 #nav .current-menu-parent > a {
     color: #346b8e;
 }
-#nav .current-menu-item > a,
-#nav .current-menu-item > a:hover {
+#nav .current-menu-item > ul > li a,
+#nav .current-menu-item > ul > li a:hover {
     color: #fff;
     background: #346b8e;
 }
