@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-
 /* * Theme Name: Slate WordPress Theme
 * Theme URI: http://okaythemes.com/themes/slate
 * Description: A Super Clean Responsive Theme
@@ -389,7 +387,6 @@ img {
 }
 #nav li ul li a {
 	margin-right: 0px;
-	font-size: 10px;
 }
 #nav li ul li a:hover {
     background: #f9f9f9;
