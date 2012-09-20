@@ -113,12 +113,11 @@
 				</price_table> -->
 			</pages>
 		</services>
-		
-		<!--<blog>
+		<blog>
 			<label>Blog</label>
 			<title>Blog</title>
-			<route>blog</route>
-		</blog> -->
+			<uri>blog</uri>
+		</blog>
 		<local_marketing>
 			<title>Local Marketing</title>
 			<label>Local Marketing</label>
