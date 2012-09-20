@@ -330,6 +330,10 @@ img {
 }
 #nav > .current-menu-item > a,
 #nav > li a:hover { color: #4C4C4C }
+#nav > .current-menu-item > a {
+    color: #fff;
+    background: #346b8e;
+}
 .plus { color: #aaa }
 #nav ul {
     position: absolute;
