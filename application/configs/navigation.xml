@@ -113,11 +113,7 @@
 				</price_table> -->
 			</pages>
 		</services>
-		<blog>
-			<label>Blog</label>
-			<title>Blog</title>
-			<uri>blog</uri>
-		</blog>
+
 		<local_marketing>
 			<title>Local Marketing</title>
 			<label>Local Marketing</label>
@@ -215,6 +211,11 @@
 				</baja_salads>
 			</pages>
 		</portfolio>
+		<blog>
+			<label>Blog</label>
+			<title>Blog</title>
+			<uri>blog</uri>
+		</blog>
 		<contact>
 			<label>Contacto</label>
 			<title>Contáctenos</title>
