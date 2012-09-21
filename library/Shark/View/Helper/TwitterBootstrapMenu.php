@@ -57,12 +57,15 @@ class Shark_View_Helper_TwitterBootstrapMenu extends Zend_View_Helper_Abstract {
 	private function _buildNavbar($container) {
 		$output = '
 		<div class="navbar">
+			<!--
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
 			<div class="nav-collapse">
+			-->
+			<div>
 				<ul class="nav">';
 		foreach ($container as $page) {
 	 		$output .= $this->_buildItemBootstrap($page);

@@ -403,6 +403,7 @@ a.more-link
 			float: right
 			ul.nav
 				li
+					text-align: left
 					a
 						padding: 7px 31px 30px 0
 						color: #333
@@ -766,3 +767,39 @@ a.more-link
 		text-align: center
 	h3
 		line-height: 1.5em
+
+@media (max-width: 1024px)
+	#wrapper #page .wrap .jumbo
+		padding: 0
+		margin: 0
+	#logo
+		width: 100%
+		h1
+			margin: 0 auto
+
+@media (max-width: 979px) and (min-width: 768px)
+	.header
+		.span3
+			width: 100%
+		.span9
+			width: inherit
+		#logo
+			width: 100%
+			h1
+				margin: 0 auto
+		.navbar
+			ul.nav
+				margin: 0
+				li
+					padding: 0
+					> a
+						padding: 7px 31px 30px 0 !important
+@media (max-width: 1024px) and (min-width: 768px)
+	.header
+		.navbar
+			ul.nav
+				text-align: center
+				li
+					padding: 0
+					> a
+						padding: 7px 31px 30px 0 !important
