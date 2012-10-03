@@ -3,7 +3,7 @@ data/sessions/*
 data/cache/*
 public/cached/*
 library/Zend
-*.htaccess
+/.htaccess
 .sass-cache
 *php_errors.log
 *error_log
