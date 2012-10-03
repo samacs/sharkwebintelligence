@@ -45,8 +45,8 @@ class Shark_View_Helper_Carousel extends Zend_View_Helper_Abstract {
 			$i++;
 		}
 		$output .= '</div>';
-		$output .= '<a href="#carousel-' . $id . '" class="left carousel-control" data-slide="prev">&lsaquo;</a>';
-		$output .= '<a href="#carousel-' . $id . '" class="right carousel-control" data-slide="next">&rsaquo;</a>';
+		//$output .= '<a href="#carousel-' . $id . '" class="left carousel-control" data-slide="prev">&lsaquo;</a>';
+		//$output .= '<a href="#carousel-' . $id . '" class="right carousel-control" data-slide="next">&rsaquo;</a>';
 		$output .= '</div>';
 		$id++;
 		return $output;
