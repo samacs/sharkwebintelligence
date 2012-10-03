@@ -13,4 +13,6 @@
 		}).get());
 		this.height(maxHeight);
 	};
+
+	$('.carousel').carousel();
 }(jQuery);
