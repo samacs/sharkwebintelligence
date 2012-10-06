@@ -11,3 +11,4 @@ impresoratecnica
 *php.ini
 blog/wp-content/cache/*
 !blog/wp-content/cache/.htaccess
+expreso
