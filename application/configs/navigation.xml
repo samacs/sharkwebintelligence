@@ -63,21 +63,13 @@
 					</params>
 				</web_hosting> -->
 				<web_design>
-					<label>Diseño web</label>
-					<title>Diseño web</title>
+					<label>Websites</label>
+					<title>Websites</title>
 					<route>services</route>
 					<params>
-						<service>diseno-web</service>
+						<service>websites</service>
 					</params>
 				</web_design>
-				<web_development>
-					<label>Desarrollo web</label>
-					<title>Desarrollo web</title>
-					<route>services</route>
-					<params>
-						<service>desarrollo-web</service>
-					</params>
-				</web_development>
 				<social_networking>
 					<label>Redes sociales</label>
 					<title>Manejo de redes sociales</title>
@@ -86,6 +78,23 @@
 						<service>redes-sociales</service>
 					</params>
 				</social_networking>
+				<publicidad_en_google>
+					<label>Publicidad en Google</label>
+					<title>Publicidad en Google</title>
+					<route>services</route>
+					<params>
+						<service>publicidad-en-google</service>
+					</params>
+				</publicidad_en_google>
+				<web_development>
+					<label>Desarrollo web</label>
+					<title>Desarrollo web</title>
+					<route>services</route>
+					<params>
+						<service>desarrollo-web</service>
+					</params>
+				</web_development>
+				
 				<web_analytics>
 					<label>Análisis web</label>
 					<title>Análisis web</title>
@@ -211,11 +220,11 @@
 				</baja_salads>
 			</pages>
 		</portfolio>
-		<blog>
+		<!--<blog>
 			<label>Blog</label>
 			<title>Blog</title>
 			<uri>blog</uri>
-		</blog>
+		</blog> -->
 		<contact>
 			<label>Contacto</label>
 			<title>Contáctenos</title>
