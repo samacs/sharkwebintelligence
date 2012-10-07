@@ -33,7 +33,7 @@ class Shark_View extends Zend_View {
 		$this->minifyHeadLink()->appendStylesheet($this->baseUrl('/skins/' . $site->skin . '/css/screen.css'), array('media' => 'screen, projection'));
 		$this->minifyHeadLink(array(
 			'rel' => 'author',
-			'href' => $this->baseUrl('/humans.txt'),
+			'href' => 'https://plus.google.com/103223395393674962309?rel=author',
 			'type' => 'text/plain',
 		));
 		$this->minifyHeadLink(array(
