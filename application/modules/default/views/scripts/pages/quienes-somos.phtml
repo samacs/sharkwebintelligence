@@ -7,11 +7,14 @@ $this->headTitle('¿Quiénes somos?');
  * Meta data
  */
 $this->headMeta()->setName('author', 'Shark Web Intelligence');
-$this->headMeta()->setName('description', 'Acerca de Shark Web Intelligence.');
+$this->headMeta()->setName('description', 'Acerca de ((Shark Web Intelligence.');
 ?>
+<? $this->placeholder('microdata')->captureStart() ?>
+itemscope itemtype="http://schema.org/AboutPage"
+<? $this->placeholder('microdata')->captureEnd() ?>
 <div class="span12 hidden-phone">
 	<div class="jumbo">
-		<h1>¿Quienes somos?</h1>
+		<h1 itemprop="name">¿Quienes somos?</h1>
 		<h2>conoce nuestra empresa</h2>
 	</div>
 </div>
@@ -23,17 +26,20 @@ $this->headMeta()->setName('description', 'Acerca de Shark Web Intelligence.');
 		</a>
 	</p>
 </div>
-<div class="span9 content right">
+<div class="span9 content right" itemprop="description">
 	<div class="span9 last">
-		<img src="<?= $this->baseUrl('/img/acerca/quienes-somos.jpg') ?>" class="full-width" alt="Conocenos" >
+			<h1>Acerca de...</h1>
+		    <p>Fundada en el año 2004, Shark Web Intelligence es una empresa especializada en desarrollar soluciones tecnológicas para web, manejo de redes sociales, marketing en línea y análisis estadístico de tráfico.</p>
+			<img src="<?= $this->baseUrl('/img/acerca/quienes-somos.jpg') ?>" class="full-width" alt="Conocenos" >
+			<h3>Creamos,</h3> <p>desarrollamos e implementamos websites, estrategias y contenidos para posicionar su nombre y su marca e influir entre sus potenciales clientes.</p>
 			<h3>Creemos</h3>
 			<p>en la tecnología como medio para alcanzar objetivos de organizaciones y causas. La comunicación eficaz provee soluciones integrales.
 			</p>
 			<h3>Trabajamos</h3>
 			<p>con pasión y entrega trastocando los límites de la creatividad con el fin de satisfacer las necesidades de nuestros clientes.</p>
 			<h3>Ofrecemos</h3>
-			<p>servicios de inteligencia web para sus desarrollos.
-			<h3>Creamos,</h3> <p>desarrollamos e implementamos estrategias y contenidos para posicionar su nombre y su marca e influir entre sus potenciales clientes.</p>
+			<p>servicios de inteligencia web para sus desarrollos.</p>
+			
 			<div class="center">
 				<h3>Somos Shark Web Intelligence.</h3>
 				<h3>¿Qué esperas para iniciar ese proyecto que tienes en mente?</h3>
