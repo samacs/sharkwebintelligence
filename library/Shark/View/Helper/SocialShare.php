@@ -46,12 +46,15 @@ class Shark_View_Helper_SocialShare extends Zend_View_Helper_Abstract
     /**
      * Displays social sharing buttons using ShareThis.com
      *
-     * @param array  $buttons List of buttons and properties.
-     * @param string $size    Button size.
+     * @param array  $buttons    List of buttons and properties.
+     * @param string $size       Button size.
+     * @param array  $attributes List of custom attributes.
+     *
+     * @see http://support.sharethis.com/customer/portal/articles/446558-custom-buttons
      *
      * @return string
      */
-    public function socialShare($buttons, $size = 'large')
+    public function socialShare($buttons, $size = 'large', $attributes = array())
     {
         $publisher = Shark_Config::getConfig()->site->sharethis->publisher;
         $output = '';
@@ -59,6 +62,9 @@ class Shark_View_Helper_SocialShare extends Zend_View_Helper_Abstract
             $output .= '<span class="st_' . strtolower($button) . '_' . $size . '"';
             $output .= ' st_title="' . $this->view->headTitle() . '"';
             $output .= ' st_url="' . $this->view->absoluteUrl($this->view->url()) . '"';
+            foreach ($attributes as $name => $value) {
+                $output .= ' ' . $name . '="' . $value . '"';
+            }
             $output .= '></span>';
         }
         if (!self::$_scriptsSet) {
