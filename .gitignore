@@ -12,5 +12,5 @@ impresoratecnica
 blog/wp-content/cache/*
 !blog/wp-content/cache/.htaccess
 expreso
-newsleter
+newsletter
 livehelp
