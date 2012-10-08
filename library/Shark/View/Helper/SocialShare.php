@@ -60,11 +60,13 @@ class Shark_View_Helper_SocialShare extends Zend_View_Helper_Abstract
         $output = '';
         foreach ($buttons as $button) {
             $output .= '<span class="st_' . strtolower($button) . '_' . $size . '"';
-            $output .= ' st_title="' . $this->view->headTitle() . '"';
-            $output .= ' st_url="' . $this->view->absoluteUrl($this->view->url()) . '"';
+            //$output .= ' st_title="' . $this->view->headTitle() . '"';
+            //$output .= ' st_url="' . $this->view->absoluteUrl($this->view->url()) . '"';
+            /*
             foreach ($attributes as $name => $value) {
                 $output .= ' ' . $name . '="' . $value . '"';
             }
+            */
             $output .= '></span>';
         }
         if (!self::$_scriptsSet) {
