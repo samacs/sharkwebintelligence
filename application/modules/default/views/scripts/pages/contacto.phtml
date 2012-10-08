@@ -15,6 +15,43 @@ $this->headMeta()->setName('description', 'Póngase en contacto con nosotros');
 		<h2>Contáctenos para un presupuesto sin compromiso</h2>
 	</div>
 </div>
-<div class="span9 content right" id="services-overview">
-	<p>Lorem ipsum dolor sit amet.</p>
+<div>
+	<div class="span3 sidebar left">
+		<p>Escriba sus datos de contacto y mensaje.
+		Nos pondremos en contacto tan pronto sea posible.</p>
+		
+		<h4>Formulario de consulta</h4>
+
+		<p  id="brochure">
+			<a href="#">Descarga nuesto <br />Formulario de Consulta</a>
+		</p>
+
+	</div>
+	<div class="span9 content right last" id="contact">
+		<form id="contact-form" action="javascript:void(0);">
+			<fieldset>			
+				<p id="formstatus"></p>
+				<p>
+					<label for="name">Nombre: <span class="required">*</span></label><br />
+					<input class="text" type="text" id="name" name="name" value="" />
+				</p>
+				<p>
+					<label for="email">Email: <span class="required">*</span></label><br />
+					<input class="text" type="text" id="email" name="email" value="" />
+				</p>
+				<p>
+					<label for="subject">Asunto: <span class="required">*</span></label><br />
+					<input class="text" type="text" id="subject" name="subject" value=""  />
+				</p>
+				<p>
+					<label for="message">Mensaje: </label><br />
+					<textarea id="message" name="message" rows="3" cols="25"></textarea>
+				</p>
+				<p>
+					<input type="submit" name="submit" value="Enviar!" />
+				</p>
+				
+			</fieldset>
+		</form><!-- end #contact-form -->
+	</div>
 </div>
