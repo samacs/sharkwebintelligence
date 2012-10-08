@@ -1,0 +1,32 @@
+<?
+/**
+ * Title
+ */
+$this->headTitle('Error');
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', 'Shark Web Intelligence');
+$this->headMeta()->setName('description', 'Error.');
+?>
+<div class="span12 hidden-phone">
+	<div class="jumbo">
+		<h1 itemprop="name">Error</h1>
+		<h2>Un error ha ocurrido</h2>
+	</div>
+</div>
+<div class="span3 sidebar left hidden-phone">
+		<!-- <?= $this->twitterBootstrapMenu('mainnav', 'list', 'Acerca') ?> -->
+	<p id="brochure">
+		<a href="<?= $this->baseUrl('/files/sharkwebintelligence-brochure.pdf') ?>" title="Download our brochure">
+			Descarga nuestro triptico
+		</a>
+	</p>
+</div>
+<div class="span9 content right">
+	<div class="span9 last">
+		<div id="content">
+			<strong>Un error ha ocurrido</strong><br /><br /> Ha ocurrido uno o varios errores al tratar de suscribirte a nuestra lista de contactos.<br /><br /> <a href="javascript:history.back()">&laquo; Regresar</a>
+		</div>
+	</div>
+</div>

@@ -8,12 +8,7 @@
 	<div class="box">
 		<h5>Newsletter</h5>
 		<p>Suscr&iacute;bete a nuestra lista de correos y mantente al tanto de nuestros proyectos.</p>
-		<form id="form_newsletter" class="form-inline">
-			<fieldset>
-				<input type="text" class="input-medium" placeholder="Your email">
-				<button type="submit" class="btn">Sign up</button>
-			</fieldset>
-		</form>
+		<?= $this->render('_newsletterform.phtml') ?>
 	</div>
 </div>
 <div id="contact-info" class="span3" itemscope itemtype="http://schema.org/Place">

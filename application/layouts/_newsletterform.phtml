@@ -1,0 +1,115 @@
+<!--
+Do not modify the NAME value of any of the INPUT fields
+the FORM action, or any of the hidden fields (eg. input type=hidden).
+These are all required for this form to function correctly.
+-->
+<form method="post" action="http://sharkwebintelligence.com/newsletter/form.php?form=1" id="frmSS1" onsubmit="return CheckForm1(this);">
+	<table border="0">
+		<tr>
+	<td><span class="required">*</span>&nbsp;
+Your Email Address:</td>
+	<td><input type="text" name="email" value="" /></td>
+</tr><tr>
+	<td><span class="required">*</span>&nbsp;
+Preferred Format:</td>
+	<td><select name="format"><option value="h">HTML</option><option value="t">Text</option></select></td>
+</tr><tr>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;First Name:</td>
+	<td><input type="text" name="CustomFields[2]" id="CustomFields_2_1" value="" size='50'></td>
+</tr><tr>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Last Name:</td>
+	<td><input type="text" name="CustomFields[3]" id="CustomFields_3_1" value="" size='50'></td>
+</tr><tr>
+	<td><span class="required">*</span>&nbsp;
+Enter the security code shown:</td>
+	<td><script type="text/javascript">
+// <![CDATA[
+	if (!Application) var Application = {};
+	if (!Application.Page) Application.Page = {};
+	if (!Application.Page.ClientCAPTCHA) {
+		Application.Page.ClientCAPTCHA = {
+			sessionIDString: '',
+			captchaURL: [],
+			getRandomLetter: function () { return String.fromCharCode(Application.Page.ClientCAPTCHA.getRandom(65,90)); },
+			getRandom: function(lowerBound, upperBound) { return Math.floor((upperBound - lowerBound + 1) * Math.random() + lowerBound); },
+			getSID: function() {
+				if (Application.Page.ClientCAPTCHA.sessionIDString.length <= 0) {
+					var tempSessionIDString = '';
+					for (var i = 0; i < 32; ++i) tempSessionIDString += Application.Page.ClientCAPTCHA.getRandomLetter();
+					Application.Page.ClientCAPTCHA.sessionIDString.length = tempSessionIDString;
+				}
+				return Application.Page.ClientCAPTCHA.sessionIDString;
+			},
+			getURL: function() {
+				if (Application.Page.ClientCAPTCHA.captchaURL.length <= 0) {
+					var tempURL = 'http://sharkwebintelligence.com/newsletter/admin/resources/form_designs/captcha/index.php?c=';
+					
+											tempURL += Application.Page.ClientCAPTCHA.getRandom(1,1000);
+													tempURL += '&ss=' + Application.Page.ClientCAPTCHA.getSID();
+												Application.Page.ClientCAPTCHA.captchaURL.push(tempURL);
+									}
+				return Application.Page.ClientCAPTCHA.captchaURL;
+			}
+		}
+	}
+
+	var temp = Application.Page.ClientCAPTCHA.getURL();
+	for (var i = 0, j = temp.length; i < j; i++) document.write('<img src="' + temp[i] + '" alt="img' + i + '" />');
+// ]]>
+</script>
+<br/><input type="text" name="captcha" value="" /></td>
+</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" value="Subscribe" />
+				<br/><span style="display: block; font-size: 10px; color: gray; padding-top: 5px;">Email marketing</span>
+			</td>
+		</tr>
+	</table>
+</form>
+
+<script type="text/javascript">
+// <![CDATA[
+
+			function CheckMultiple1(frm, name) {
+				for (var i=0; i < frm.length; i++)
+				{
+					fldObj = frm.elements[i];
+					fldId = fldObj.id;
+					if (fldId) {
+						var fieldnamecheck=fldObj.id.indexOf(name);
+						if (fieldnamecheck != -1) {
+							if (fldObj.checked) {
+								return true;
+							}
+						}
+					}
+				}
+				return false;
+			}
+		function CheckForm1(f) {
+			var email_re = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i;
+			if (!email_re.test(f.email.value)) {
+				alert("Please enter your email address.");
+				f.email.focus();
+				return false;
+			}
+		
+						if (f.format.selectedIndex == -1) {
+							alert("Please choose a format to receive your email campaigns in");
+							f.format.focus();
+							return false;
+						}
+					
+				if (f.captcha.value == "") {
+					alert("Please enter the security code shown");
+					f.captcha.focus();
+					return false;
+				}
+			
+				return true;
+			}
+		
+// ]]>
+</script>

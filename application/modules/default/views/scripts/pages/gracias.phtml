@@ -1,0 +1,32 @@
+<?
+/**
+ * Title
+ */
+$this->headTitle('Gracias');
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', 'Shark Web Intelligence');
+$this->headMeta()->setName('description', 'Gracias.');
+?>
+<div class="span12 hidden-phone">
+	<div class="jumbo">
+		<h1 itemprop="name">Gracias</h1>
+		<h2>Por suscribirte a nuestro newsletter</h2>
+	</div>
+</div>
+<div class="span3 sidebar left hidden-phone">
+		<!-- <?= $this->twitterBootstrapMenu('mainnav', 'list', 'Acerca') ?> -->
+	<p id="brochure">
+		<a href="<?= $this->baseUrl('/files/sharkwebintelligence-brochure.pdf') ?>" title="Download our brochure">
+			Descarga nuestro triptico
+		</a>
+	</p>
+</div>
+<div class="span9 content right">
+	<div class="span9 last">
+		<div id="content">
+			<strong>Tu suscripción se realizó con éxito</strong><br /><br /> Gracias por suscribirte a nuestra lista de contactos.<br /><br /> Tú suscripción se realizó con éxito.<br /><br /> <a href="javascript:history.back()">&laquo; Regresar</a>
+		</div>
+	</div>
+</div>

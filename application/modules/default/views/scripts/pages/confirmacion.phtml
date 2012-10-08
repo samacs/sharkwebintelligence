@@ -1,0 +1,32 @@
+<?
+/**
+ * Title
+ */
+$this->headTitle('Confirmación de suscripción');
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', 'Shark Web Intelligence');
+$this->headMeta()->setName('description', 'Confirmación de suscripción.');
+?>
+<div class="span12 hidden-phone">
+	<div class="jumbo">
+		<h1 itemprop="name">Gracias</h1>
+		<h2>Por suscribirte a nuestro newsletter</h2>
+	</div>
+</div>
+<div class="span3 sidebar left hidden-phone">
+		<!-- <?= $this->twitterBootstrapMenu('mainnav', 'list', 'Acerca') ?> -->
+	<p id="brochure">
+		<a href="<?= $this->baseUrl('/files/sharkwebintelligence-brochure.pdf') ?>" title="Download our brochure">
+			Descarga nuestro triptico
+		</a>
+	</p>
+</div>
+<div class="span9 content right">
+	<div class="span9 last">
+		<div id="content">
+			<strong>La suscripción de tu correo electrónico está casi completa...</strong><br /><br /> Un correo electrónico ha sido enviado a la dirección de correo que indicaste, este correo electrónico es un enlace de confirmación; por favor, haz clic en el enlace para confirmar tú suscripción.<br /><br /> Una vez que lo hayas hecho, tú suscripción se habrá realizado.<br /><br /> <a href="javascript:history.back()">&laquo; Regresar</a>
+		</div>
+	</div>
+</div>
