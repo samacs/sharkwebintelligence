@@ -34,12 +34,12 @@ class PagesController extends Shark_Controller_Action {
 		$script = implode('/', array($this->_path, $this->getRequest()->getParam($this->_param, null)));
 		if (APPLICATION_ENV === 'production') {
 			if (($content = $this->_cache->load($this->_tag)) === false) {
-				$content = $this->view->render('pages/' . $script . '.phtml');
+				$content = $this->view->render('pages' . DS . $script . '.phtml');
 				$this->_cache->save($content);
 			}
 			$this->view->content = $content;
 		} else {
-			$this->view->content = $this->view->render('pages/' . $script . '.phtml');
+			$this->view->content = $this->view->render('pages'. DS . $script . '.phtml');
 		}
 	}
 }

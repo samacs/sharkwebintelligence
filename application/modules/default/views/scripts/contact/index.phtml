@@ -1,0 +1,33 @@
+<?
+/**
+ * Title
+ */
+$this->headTitle('Contacto');
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', 'Shark Web Intelligence');
+$this->headMeta()->setName('description', 'Póngase en contacto con nosotros');
+?>
+<div class="span12">
+	<div class="jumbo">
+		<h1>Contacto</h1>
+		<h2>Contáctenos para un presupuesto sin compromiso</h2>
+	</div>
+</div>
+<div>
+	<div class="span3 sidebar left">
+		<p>Escriba sus datos de contacto y mensaje.
+		Nos pondremos en contacto tan pronto sea posible.</p>
+
+		<h4>Formulario de consulta</h4>
+
+		<p  id="brochure">
+			<a href="#">Descarga nuesto <br />Formulario de Consulta</a>
+		</p>
+
+	</div>
+	<div class="span9 content right last" id="contact">
+		<?= $this->form ?>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <newsletter>
+        <xmlrequest>
+            <username>admin</username>
+            <usertoken>22dd6b64485850e7faf1ba7e6eea4f9bbc7fa4be</usertoken>
+            <requesttype>suscribers</requesttype>
+            <requestmethod>AddSubscriberToList</requestmethod>
+            <details>
+                <emailaddress />
+                <mailinglist />
+                <format />
+                <customfields>
+                </customfields>
+            </details>
+        </xmlrequest>
+    </newsletter>
+</config>

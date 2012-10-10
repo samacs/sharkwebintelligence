@@ -102,7 +102,7 @@
 						<service>email-marketing</service>
 					</params>
 				</email_marketing>
-				
+
 				<web_analytics>
 					<label>Análisis web</label>
 					<title>Análisis web</title>
@@ -236,10 +236,7 @@
 		<contact>
 			<label>Contacto</label>
 			<title>Contáctenos</title>
-			<route>pages</route>
-			<params>
-				<page>contacto</page>
-			</params>
+			<route>contact</route>
 		</contact>
 	</mainnav>
 	<footnav>

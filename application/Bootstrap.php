@@ -1,4 +1,5 @@
 <?php
+// @codingStandardsIgnoreStart
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 
 	protected function _initSession() {
@@ -18,6 +19,24 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 			$cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
 			Zend_Registry::set('Zend_Cache', $cache);
 		}
+	}
+
+	protected function _initAutoloader()
+	{
+		$frontController = $this->getResource('frontController');
+		$autoloader = Zend_Loader_Autoloader::getInstance();
+		new Zend_Loader_Autoloader_Resource(
+		    array(
+				'basePath' => APPLICATION_PATH . DS . 'modules' . DS . 'default',
+				'namespace' => '',
+				'resourceTypes' => array(
+					'form' => array(
+						'path' => 'forms',
+						'namespace' => 'Form',
+					),
+				),
+			)
+		);
 	}
 
 	protected function _initTranslate() {
@@ -57,6 +76,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 			)
 		);
 		$router->addRoute('pages', $route);
+
+		$route = new Zend_Controller_Router_Route(
+			'/contacto',
+			array(
+				'module' => 'default',
+				'controller' => 'contact',
+				'action' => 'index',
+			)
+		);
+		$router->addRoute('contact', $route);
 
 		// Clientes
 		$route = new Zend_Controller_Router_Route_Regex(
@@ -167,3 +196,4 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		$front->registerPlugin(new Shark_Controller_Plugin_Locale());
 	}
 }
+// @codingStandardsIgnoreEnd
