@@ -13,14 +13,14 @@ $link = array(
 ?>
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 	<header>
-		<time class="date" date="<?= $this->post->created_at ?>">
+		<time class="date updated" date="<?= $this->post->created_at ?>">
 			<span class="weekday"><?= $date->toString(Zend_Date::WEEKDAY) ?></span>
 			<span class="day"><?= $day ?></span>
 			<span class="month"><?= $date->toString(Zend_Date::MONTH_NAME) ?></span>
 			<span class="year"><?= $year ?></span>
 		</time>
 		<hgroup>
-			<h3>
+			<h3 class="entry-title">
 				<a href="<?= $this->url($link, 'blog-post') ?>" itemprop="name">
 					<?= $this->post->title ?>
 				</a>
@@ -34,8 +34,8 @@ $link = array(
 		<?= $this->post->intro ?>
 	</div>
 	<footer>
-		<div itemprop="author" itemscope itemtype="http://schema.org/Person">
-		<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>" itemprop="name">
+		<div itemprop="author" class="hcard" itemscope itemtype="http://schema.org/Person">
+		<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>" itemprop="name" class="author">
 			<?= $this->post->author->name ?>
 		</a>
 		<a href="<?= $this->post->author->gplus_profile ?>" title="<?= $this->post->author->name ?> en Google Plus" itemprop="url">
