@@ -1,0 +1,42 @@
+<?
+$date = new Zend_Date($this->post->created_at, null, 'es_MX');
+$year = $date->get(Zend_Date::YEAR);
+$month = $date->get(Zend_Date::MONTH);
+$day = $date->get(Zend_Date::DAY);
+$link = array(
+	'year' => $year,
+	'month' => $month,
+	'day' => $day,
+	'alias' => $this->post->alias,
+	'category_alias' => $this->post->category->alias,
+);
+?>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<header>
+		<time class="date" date="<?= $this->post->created_at ?>">
+			<span class="weekday"><?= $date->toString(Zend_Date::WEEKDAY) ?></span>
+			<span class="day"><?= $day ?></span>
+			<span class="month"><?= $date->toString(Zend_Date::MONTH_NAME) ?></span>
+			<span class="year"><?= $year ?></span>
+		</time>
+		<hgroup>
+			<h3>
+				<a href="<?= $this->url($link, 'blog-post') ?>" itemprop="name">
+					<?= $this->post->title ?>
+				</a>
+			</h3>
+			<h2>
+				<a href="<?= $this->url(array('category_alias' => $this->post->category->alias), 'blog-category') ?>" title="<?= $this->post->category->title ?>"><?= $this->post->category->title ?></a>
+			</h2>
+		</hgroup>
+	</header>
+	<div class="hentry" itemprop="description">
+		<?= $this->post->intro ?>
+	</div>
+	<footer>
+		<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+		<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>" itemprop="name">
+			<?= $this->post->author->name ?>
+		</a>
+	</footer>
+</article>

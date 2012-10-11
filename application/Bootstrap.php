@@ -8,17 +8,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	}
 
 	protected function _initCache() {
-		if (APPLICATION_ENV === 'production') {
-			$frontendOptions = array(
-				'lifetime' => 7200,
-				'automatic_serialization' => true,
-			);
-			$backendOptions = array(
-				'cache_dir' => APPLICATION_PATH . DS . '..' . DS . 'data' . DS . 'cache',
-			);
-			$cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
-			Zend_Registry::set('Zend_Cache', $cache);
-		}
+		$frontendOptions = array(
+			'lifetime' => 7200,
+			'automatic_serialization' => true,
+		);
+		$backendOptions = array(
+			'cache_dir' => APPLICATION_PATH . DS . '..' . DS . 'data' . DS . 'cache',
+		);
+		$cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
+		Zend_Registry::set('Zend_Cache', $cache);
 	}
 
 	protected function _initAutoloader()
@@ -33,6 +31,18 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 					'form' => array(
 						'path' => 'forms',
 						'namespace' => 'Form',
+					),
+					'model' => array(
+						'path' => 'models',
+						'namespace' => 'Model',
+					),
+					'table' => array(
+						'path' => 'tables',
+						'namespace' => 'Table',
+					),
+					'entity' => array(
+						'path' => 'entities',
+						'namespace' => 'Entity',
 					),
 				),
 			)
@@ -132,13 +142,57 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		);
 		$router->addRoute('projects', $route);
 
-		// Blog
+		$now = Zend_Date::now();
+
 		$route = new Zend_Controller_Router_Route(
-			'/blog',
+			'blog/:category_alias/:year/:month/:day/:alias',
 			array(
 				'module' => 'blog',
-				'controller' => 'index',
-				'action' => 'index',
+				'controller' => 'posts',
+				'action' => 'view',
+				'category_alias' => null,
+				'alias' => null,
+			)
+		);
+		$router->addRoute('blog-post', $route);
+
+		$route = new Zend_Controller_Router_Route(
+			'blog/autor/:username',
+			array(
+				'module' => 'blog',
+				'controller' => 'posts',
+				'action' => 'author',
+				'username' => null,
+			)
+		);
+		$router->addRoute('blog-author', $route);
+
+		$route = new Zend_Controller_Router_Route(
+			'blog/:category_alias',
+			array(
+				'module' => 'blog',
+				'controller' => 'posts',
+				'action' => 'category',
+				'category_alias' => null,
+			)
+		);
+		$router->addRoute('blog-category', $route);
+
+		// Blog
+		$route = new Zend_Controller_Router_Route(
+			'/blog/:year/:month/:day',
+			array(
+				'module' => 'blog',
+				'controller' => 'posts',
+				'action' => 'list',
+				'year' => $now->toString('YYYY'),
+				'month' => $now->toString('MM'),
+				'day' => $now->toString('dd'),
+			),
+			array(
+				'year' => '\d{4}',
+				'month' => '\d{2}',
+				'day' => '\d{2}',
 			)
 		);
 		$router->addRoute('blog', $route);
@@ -194,6 +248,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	protected function _initControllerPlugins() {
 		$front = Zend_Controller_Front::getInstance();
 		$front->registerPlugin(new Shark_Controller_Plugin_Locale());
+	}
+
+	protected function _initTest()
+	{
+		$front = Zend_Controller_Front::getInstance();
 	}
 }
 // @codingStandardsIgnoreEnd

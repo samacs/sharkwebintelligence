@@ -1,0 +1,74 @@
+<? if ($this->pageCount) : ?>
+<div class="pagination pagination-centered">
+  <ul>
+  <?
+  // First page
+  if (isset($this->previous)) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $this->first)) ?>">
+        <?= $this->translate('&lsaquo;') ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="disabled">
+      <span><?= $this->translate('&lsaquo;') ?></span>
+    </li>
+  <? endif ?>
+  <?
+  // Previous page
+  if (isset($this->previous)) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $this->previous)) ?>">
+        <?= $this->translate('&lsaquo;&lsaquo;') ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="disabled">
+      <span><?= $this->translate('&lsaquo;&lsaquo;') ?></span>
+    </li>
+  <? endif ?>
+  <?
+  // Numbered page links
+  foreach ($this->pagesInRange as $page) : ?>
+  <? if ($page != $this->current) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $page)) ?>">
+        <?= $page ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="active">
+      <span><?= $page ?></span>
+    </li>
+  <? endif ?>
+  <? endforeach ?>
+  <?
+  // Next page
+  if (isset($this->next)) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $this->next)) ?>">
+        <?= $this->translate('&rsaquo;&rsaquo;') ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="disabled">
+      <span><?= $this->translate('&rsaquo;&rsaquo;') ?></span>
+    </li>
+  <? endif ?>
+  <?
+  // Last page
+  if (isset($this->next)) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $this->last)) ?>">
+        <?= $this->translate('&rsaquo;') ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="disabled">
+      <span><?= $this->translate('&rsaquo;') ?></span>
+    </li>
+  <? endif ?>
+  </ul>
+  <p><?= $this->translate('Página %d de %d', $this->current, $this->pagesInRange) ?>
+</div>
+<? endif ?>

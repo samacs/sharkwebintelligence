@@ -1,0 +1,79 @@
+<?php
+/**
+ * Shark Framework
+ *
+ * LICENSE
+ *
+ * Copyright  Shark Web Intelligence
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @category   Application
+ * @package    Blog
+ * @subpackage Views
+ * @author     Saul Martinez <saul@sharkwebintelligence.com>
+ * @copyright  2012 Shark Web Intelligence
+ * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
+ * @version    ${CURRENT_VERSION}
+ * @link       http://www.sharkwebintelligence.com
+ */
+/**
+ * Title
+ */
+$this->headTitle($this->post->title);
+/**
+ * Meta data
+ */
+$this->headMeta()->setName('author', $this->post->author ? $this->post->author->name : $this->title);
+$this->headMeta()->setName('description', $this->post->intro);
+
+$date = new Zend_Date($this->post->created_at, null, 'es_MX');
+$year = $date->get(Zend_Date::YEAR);
+$month = $date->get(Zend_Date::MONTH);
+$day = $date->get(Zend_Date::DAY);
+$link = array(
+	'year' => $year,
+	'month' => $month,
+	'day' => $day,
+	'alias' => $this->post->alias,
+);
+?>
+<div class="span12">
+	<div class="jumbo">
+		<h1><?= $this->post->title ?></h1>
+		<h2>
+			<a href="<?= $this->url(array('alias' => $this->post->category->alias), 'blog-category') ?>">
+				<?= $this->post->category->title ?>
+			</a>
+		</h2>
+	</div>
+</div>
+<div class="span9 content left" id="blog-post">
+	<article class="post">
+		<header>
+			<time class="date" date="<?= $this->post->created_at ?>">
+				<span class="weekday"><?= $date->toString(Zend_Date::WEEKDAY) ?></span>
+				<span class="day"><?= $day ?></span>
+				<span class="month"><?= $date->toString(Zend_Date::MONTH_NAME) ?></span>
+				<span class="year"><?= $year ?></span>
+			</time>
+		</header>
+		<div class="hentry">
+			<?= $this->post->intro ?>
+			<?= $this->post->full ?>
+		</div>
+		<footer>
+			<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>"><?= $this->post->author->name ?></a>
+		</footer>
+	</article>
+</div>

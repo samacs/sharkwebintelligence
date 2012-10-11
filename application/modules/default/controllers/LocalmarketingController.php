@@ -14,6 +14,15 @@ class LocalmarketingController extends Shark_Controller_Action
 		if (null === $page || empty($page)) {
 			return $this->render('index');
 		}
-		return $this->render('pages/' . $page);
+		$tag = 'page_localmarketing_' . $page;
+		if (APPLICATION_ENV === 'production') {
+			if (($content = $this->_cache->load($tag)) === false) {
+				$content = $this->view->render('localmarketing/pages/' . $page . '.phtml');
+				$this->_cache->save($content, $tag);
+			}
+			$this->view->content = $content;
+		} else {
+			$this->view->content = $this->view->render('localmarketing/pages/' . $page . '.phtml');
+		}
 	}
 }

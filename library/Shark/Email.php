@@ -79,6 +79,9 @@ class Shark_Email
         $this->_email->setSubject($subject);
         if ($fromEmail !== null && $fromName !== null) {
             $this->_email->setFrom($fromName, $fromEmail);
+        } else {
+            $config = Shark_Config::getConfig();
+            $this->_email->setFrom($config->site->title, $config->site->title);
         }
         $this->view = Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer')->view;
         $this->init();

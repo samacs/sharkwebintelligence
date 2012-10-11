@@ -1439,3 +1439,46 @@ div.livehelp-container a:hover {
 #form-contact .controls .errors strong {
   color: red;
 }
+
+/* Blog */
+/* line 956, ../sass/screen.sass */
+#blog-list .post, #blog-post .post {
+  clear: both;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  float: left;
+  width: 100%;
+}
+/* line 963, ../sass/screen.sass */
+#blog-list .post header .date, #blog-post .post header .date {
+  float: left;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  text-align: center;
+}
+/* line 970, ../sass/screen.sass */
+#blog-list .post header .date span, #blog-post .post header .date span {
+  display: block;
+  text-transform: capitalize;
+}
+/* line 973, ../sass/screen.sass */
+#blog-list .post header .date span.day, #blog-post .post header .date span.day {
+  font-size: 2em;
+  display: block;
+}
+/* line 976, ../sass/screen.sass */
+#blog-list .post header h3, #blog-post .post header h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+/* line 979, ../sass/screen.sass */
+#blog-list .post footer, #blog-post .post footer {
+  float: right;
+}
+/* line 981, ../sass/screen.sass */
+#blog-list .pagination, #blog-post .pagination {
+  float: left;
+  width: 100%;
+}

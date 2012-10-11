@@ -1,5 +1,5 @@
 <?php
-
+// @codingStandardsIgnoreStart
 class PagesController extends Shark_Controller_Action {
 
 	protected $_routeName;
@@ -35,7 +35,7 @@ class PagesController extends Shark_Controller_Action {
 		if (APPLICATION_ENV === 'production') {
 			if (($content = $this->_cache->load($this->_tag)) === false) {
 				$content = $this->view->render('pages' . DS . $script . '.phtml');
-				$this->_cache->save($content);
+				$this->_cache->save($content, $this->_tag);
 			}
 			$this->view->content = $content;
 		} else {
@@ -43,3 +43,4 @@ class PagesController extends Shark_Controller_Action {
 		}
 	}
 }
+// @codingStandardsIgnoreEnd
