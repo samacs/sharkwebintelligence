@@ -4,3 +4,5 @@ Disallow: /application/
 Disallow: /library/
 Disallow: /data/
 Disallow: /min/
+Disallow: /newsletter/
+Disallow: /livehelp/
