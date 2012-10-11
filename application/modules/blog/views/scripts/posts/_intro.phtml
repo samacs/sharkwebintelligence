@@ -38,5 +38,8 @@ $link = array(
 		<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>" itemprop="name">
 			<?= $this->post->author->name ?>
 		</a>
+		<a href="<?= $this->post->author->gplus_profile ?>" title="<?= $this->post->author->name ?> en Google Plus" itemprop="url">
+			Perfil
+		</a>
 	</footer>
 </article>
