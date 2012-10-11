@@ -39,9 +39,9 @@ $this->partial()->setObjectKey('post');
 			<div class="avatar">
 				<?= $this->gravatar($this->post->author->email, array('imgSize' => 50)) ?>
 			</div>
-			<div class="bio">
+			<div class="bio hcard">
 				<h2>
-					<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>">
+					<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>" rel="fn">
 					<?= $this->post->author->name ?>
 					</a>
 				</h2>
