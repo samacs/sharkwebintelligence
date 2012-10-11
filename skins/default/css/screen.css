@@ -1482,3 +1482,33 @@ div.livehelp-container a:hover {
   float: left;
   width: 100%;
 }
+
+/* line 985, ../sass/screen.sass */
+.author .avatar {
+  float: left;
+  margin-right: 10px;
+}
+/* line 989, ../sass/screen.sass */
+.author .bio h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+/* line 992, ../sass/screen.sass */
+.author .bio p {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+/* line 995, ../sass/screen.sass */
+.author .bio .links {
+  text-align: right;
+}
+/* line 997, ../sass/screen.sass */
+.author .bio .links a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  display: inline-block;
+  color: #333333;
+  text-align: center;
+  white-space: nowrap;
+  margin-right: 10px;
+}

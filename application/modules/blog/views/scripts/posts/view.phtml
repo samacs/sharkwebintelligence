@@ -35,22 +35,34 @@ $this->partial()->setObjectKey('post');
 <? endif ?>
 <div class="span3 sidebar right">
 	<div class="box">
-		<div class="author">
+		<div class="author hcard">
 			<div class="avatar">
 				<?= $this->gravatar($this->post->author->email, array('imgSize' => 50)) ?>
 			</div>
-			<div class="bio hcard">
+			<div class="bio" itemscope itemtype="http://schema.org/Person">
 				<h2>
-					<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>" rel="fn">
+					<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>">
 					<?= $this->post->author->name ?>
 					</a>
 				</h2>
-				<p><?= $this->post->author->bio ?>
-				<a href="<?= $this->post->author->gplus_profile ?>?prsrc=3" rel="publisher" style="text-decoration:none;display:inline-block;color:#333;text-align:center; font:13px/16px arial,sans-serif;white-space:nowrap;" item="prop">
-					<span style="display:inline-block;font-weight:bold;vertical-align:top;margin-right:5px; margin-top:0px;"><?= $this->post->author->name ?></span>
-					<span style="display:inline-block;vertical-align:top;margin-right:13px; margin-top:0px;">on</span>
-					<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;"/>
-				</a>
+				<p><?= $this->post->author->bio ?></p>
+				<div class="links">
+					<? if ($this->post->author->gplus_profile) : ?>
+					<a href="<?= $this->post->author->gplus_profile ?>?prsrc=3" itemprop="url">
+						<img src="<?= $this->baseUrl('/img/gplus-16.png') ?>" alt="Google+" width="16" height="16"/>
+					</a>
+					<? endif ?>
+					<? if ($this->post->author->twitter_profile) : ?>
+					<a href="<?= $this->post->author->twitter_profile ?>?rel=author">
+						<img src="<?= $this->baseUrl('/img/twitter-bird-white-on-blue.png') ?>" alt="Twitter" width="16" height="16" />
+					</a>
+					<? endif ?>
+					<? if ($this->post->author->facebook_profile) : ?>
+					<a href="<?= $this->post->author->facebook_profile ?>?rel=author">
+						<img src="<?= $this->baseUrl('/img/facebook_logo.png') ?>" alt="Facebook" width="16" height="16" />
+					</a>
+					<? endif ?>
+				</div>
 			</div>
 		</div>
 	</div>

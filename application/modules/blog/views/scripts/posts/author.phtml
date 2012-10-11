@@ -28,6 +28,10 @@
  * @link       http://www.sharkwebintelligence.com
  */
 $this->partialLoop()->setObjectKey('post');
+
+$this->headTitle($this->author->name);
+$this->headMeta()->setName('author', $this->author->name);
+$this->headMeta()->setName('description', 'Artículos por: ' . $this->author->name);
 ?>
 <? if ($this->author) : ?>
 <div class="span12">

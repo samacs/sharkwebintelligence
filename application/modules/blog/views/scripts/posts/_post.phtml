@@ -59,9 +59,10 @@ $link = array(
 	</div>
 </div>
 <div class="span9 content left hentry" id="blog-post">
+
 	<article class="post">
 		<header>
-			<time class="date" rel="published" date="<?= $this->post->created_at ?>">
+			<time class="date" datetime="<?= $this->post->created_at ?>">
 				<span class="weekday"><?= $date->toString(Zend_Date::WEEKDAY) ?></span>
 				<span class="day"><?= $day ?></span>
 				<span class="month"><?= $date->toString(Zend_Date::MONTH_NAME) ?></span>

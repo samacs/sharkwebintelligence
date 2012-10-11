@@ -11,9 +11,9 @@ $link = array(
 	'category_alias' => $this->post->category->alias,
 );
 ?>
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post hentry" itemscope itemtype="http://schema.org/BlogPosting">
 	<header>
-		<time class="date updated" date="<?= $this->post->created_at ?>">
+		<time class="date" datetime="<?= $this->post->created_at ?>">
 			<span class="weekday"><?= $date->toString(Zend_Date::WEEKDAY) ?></span>
 			<span class="day"><?= $day ?></span>
 			<span class="month"><?= $date->toString(Zend_Date::MONTH_NAME) ?></span>
@@ -30,13 +30,14 @@ $link = array(
 			</h2>
 		</hgroup>
 	</header>
-	<div class="hentry" itemprop="description">
+	<div class="entry-content" itemprop="description">
 		<?= $this->post->intro ?>
 	</div>
 	<footer>
 		<div itemprop="author" class="hcard" itemscope itemtype="http://schema.org/Person">
-		<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" rel="author" title="<?= $this->post->author->name ?>" itemprop="name" class="author">
-			<?= $this->post->author->name ?>
-		</a>
+			<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" rel="author" title="<?= $this->post->author->name ?>" itemprop="name" class="author">
+				<?= $this->post->author->name ?>
+			</a>
+		</div>
 	</footer>
 </article>

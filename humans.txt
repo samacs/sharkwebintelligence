@@ -1,42 +1,42 @@
                                                                                          `.-:/++oso.
-                                                                                 `-:/+osyyyyyyyys:  
-                                                                          `.-/+syyyyyyyyyyyyyyy/`   
-                                                                     `-:+syyyyyyyyyyyyysssyyyo.     
-                                                                `.:+syyyyyyyyso+/:-.`` `/yys-       
-                                                            `-/oyyyyyyso+:-`          :syy+`        
-                                                        `-/oyyyyyyo/-.`             -syys-          
-                                                     .:+syyyyso/.`                `+yyy+`           
-                                                  ./syyyyyo/-`                   :syyy:             
-                                               -/syyyyyo:.`                    `+yyys.              
-                                            ./syyyyyo/.                       -syyy+`               
-                                         ./syyyyys+.`                        :yyyy/                 
-                                      `-osyyyyyo:`                          /yyyy:                  
-                                    ./syyyyyy+-`                          `+yyyy-                   
-                                  -+syyyyyy+.                             +yyyy-                    
-                               `-oyyyyyyy+.                              +yyyy:                     
-                             `:oyyyyyyyo-                               /yyyy/                      
-                           `:syyyyyyys:`                               -yyyyo                       
-                         `:syyyyyyyy+`                                `syyyy.                       
-                        -oyyyyyyyys-                                  /yyyy/                        
-                      .oyyyyyyyyy+`                                   syyyy`                        
-                    `/yyyyyyyyyy/                                    -yyyy+                         
-                   :syyyyyyyyys-                                     +yyyy-                         
-                 .+yyyyyyyyyys.                                      oyyyy`                         
-                :syyyyyyyyyys.                                       oyyyy`                         
-              `+yyyyyyyyyyys.                                        oyyyy`                         
-             -syyyyyyyyyyyy.                                         /yyyy-                         
-           `/yyyyyyyyyyyyy-                                          `yyyy+                         
-          `oyyyyyyyyyyyyy/                                            /yyyy.                        
-         -syyyyyyyyyyyyyo                                              oyyyo`                       
-        :yyyyyyyyyyyyyyy.                                              `oyyy+                       
-       /yyyyyyyyyyyyyyy+                                                 /yyy+`                     
-      +yyyyyyyyyyyyyyyy`                                                  .oyys.                    
-     +yyyyyyyyyyyyyyyy+                                                     -oyy/`                  
-    oyyyyyyyyyyyyyyyyy-                                                       ./ss:`                
-   oyyyyyyyyyyyyyyyyyy`                                                          .:/:`              
-  +yyyyyyyyyyyyyyyyyys                                                               `              
- +yyyyyyyyyyyyyyyyyyy+                                                                              
-/yyyyyyyyyyyyyyyyyyyy+                                                                              
+                                                                                 `-:/+osyyyyyyyys:
+                                                                          `.-/+syyyyyyyyyyyyyyy/`
+                                                                     `-:+syyyyyyyyyyyyysssyyyo.
+                                                                `.:+syyyyyyyyso+/:-.`` `/yys-
+                                                            `-/oyyyyyyso+:-`          :syy+`
+                                                        `-/oyyyyyyo/-.`             -syys-
+                                                     .:+syyyyso/.`                `+yyy+`
+                                                  ./syyyyyo/-`                   :syyy:
+                                               -/syyyyyo:.`                    `+yyys.
+                                            ./syyyyyo/.                       -syyy+`
+                                         ./syyyyys+.`                        :yyyy/
+                                      `-osyyyyyo:`                          /yyyy:
+                                    ./syyyyyy+-`                          `+yyyy-
+                                  -+syyyyyy+.                             +yyyy-
+                               `-oyyyyyyy+.                              +yyyy:
+                             `:oyyyyyyyo-                               /yyyy/
+                           `:syyyyyyys:`                               -yyyyo
+                         `:syyyyyyyy+`                                `syyyy.
+                        -oyyyyyyyys-                                  /yyyy/
+                      .oyyyyyyyyy+`                                   syyyy`
+                    `/yyyyyyyyyy/                                    -yyyy+
+                   :syyyyyyyyys-                                     +yyyy-
+                 .+yyyyyyyyyys.                                      oyyyy`
+                :syyyyyyyyyys.                                       oyyyy`
+              `+yyyyyyyyyyys.                                        oyyyy`
+             -syyyyyyyyyyyy.                                         /yyyy-
+           `/yyyyyyyyyyyyy-                                          `yyyy+
+          `oyyyyyyyyyyyyy/                                            /yyyy.
+         -syyyyyyyyyyyyyo                                              oyyyo`
+        :yyyyyyyyyyyyyyy.                                              `oyyy+
+       /yyyyyyyyyyyyyyy+                                                 /yyy+`
+      +yyyyyyyyyyyyyyyy`                                                  .oyys.
+     +yyyyyyyyyyyyyyyy+                                                     -oyy/`
+    oyyyyyyyyyyyyyyyyy-                                                       ./ss:`
+   oyyyyyyyyyyyyyyyyyy`                                                          .:/:`
+  +yyyyyyyyyyyyyyyyyys                                                               `
+ +yyyyyyyyyyyyyyyyyyy+
+/yyyyyyyyyyyyyyyyyyyy+
 
 				 Shark Web Intelligence - Become a Shark
 
@@ -59,7 +59,7 @@
 	From: Hermosillo, Sonora, México
 
 /* SITE */
-	Last update: 2012/07/05
+	Last update: 2012/10/10
 	Language: Spanish
 	Doctype: HTML5
 	Standards: HTML5, CSS3, humans.txt
