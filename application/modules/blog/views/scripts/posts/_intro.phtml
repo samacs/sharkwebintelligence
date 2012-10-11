@@ -35,7 +35,7 @@ $link = array(
 	</div>
 	<footer>
 		<div itemprop="author" class="hcard" itemscope itemtype="http://schema.org/Person">
-		<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" title="<?= $this->post->author->name ?>" itemprop="name" class="author">
+		<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" rel="author" title="<?= $this->post->author->name ?>" itemprop="name" class="author">
 			<?= $this->post->author->name ?>
 		</a>
 		<a href="<?= $this->post->author->gplus_profile ?>" title="<?= $this->post->author->name ?> en Google Plus" itemprop="url">
