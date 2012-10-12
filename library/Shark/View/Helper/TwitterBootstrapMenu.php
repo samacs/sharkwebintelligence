@@ -4,7 +4,6 @@ class Shark_View_Helper_TwitterBootstrapMenu extends Zend_View_Helper_Abstract {
 	public function twitterBootstrapMenu($menu = 'mainnav', $type = 'navbar', $submenu = null) {
 		$config = new Zend_Config_Xml(APPLICATION_PATH . DS . 'configs' . DS . 'navigation.xml', $menu);
 		$container = new Zend_Navigation($config);
-
 		if ($submenu) {
 			$container = $container->findOneByLabel($submenu);
 		}

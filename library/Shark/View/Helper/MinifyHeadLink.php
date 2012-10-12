@@ -8,12 +8,12 @@
  * @author     Rob "Bubba" Hines
  */
 class Shark_View_Helper_MinifyHeadLink extends Zend_View_Helper_HeadLink {
-	
+
 	/**
-	 * 
+	 *
 	 * The folder to be appended to the base url to find minify on your server.
 	 * The default assumes you installed minify in your documentroot\min directory
-	 * if you modified the directory name at all, you need to let the helper know 
+	 * if you modified the directory name at all, you need to let the helper know
 	 * here.
 	 * @var string
 	 */
@@ -23,10 +23,10 @@ class Shark_View_Helper_MinifyHeadLink extends Zend_View_Helper_HeadLink {
 	 * Registry key for placeholder
 	 * @var string
 	 */
-	protected $_regKey = 'RC_View_Helper_MinifyHeadLink';
+	protected $_regKey = 'Shark_View_Helper_MinifyHeadLink';
 
 	/**
-	 * 
+	 *
 	 * Known Valid CSS Extension Types
 	 * @var array
 	 */
@@ -35,7 +35,7 @@ class Shark_View_Helper_MinifyHeadLink extends Zend_View_Helper_HeadLink {
 	 * Returns current object instance. Optionally, allows passing array of
 	 * values to build link.
 	 *
-	 * 
+	 *
 	 * @param array $attributes
 	 * @param string $placement
 	 * @return Zend_View_Helper_HeadLink
@@ -45,10 +45,10 @@ class Shark_View_Helper_MinifyHeadLink extends Zend_View_Helper_HeadLink {
 	}
 
 	/**
-	 * 
+	 *
 	 * Gets a string representation of the headLinks suitable for inserting
-	 * in the html head section. 
-	 * 
+	 * in the html head section.
+	 *
 	 * It is important to note that the minified files will be minified
 	 * in reverse order of being added to this object, and ALL files will be rendered
 	 * prior to inline being rendered.
@@ -113,7 +113,7 @@ class Shark_View_Helper_MinifyHeadLink extends Zend_View_Helper_HeadLink {
 	}
 
 	/**
-	 * 
+	 *
 	 * Loops through the defined valid static css extensions we use.
 	 * @param string $string
 	 */
