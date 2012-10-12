@@ -39,7 +39,7 @@
  * @version    ${CURRENT_VERSION}
  * @link       http://www.sharkwebintelligence.com
  */
-class Shark_View_Helper_CKEditor extends Zend_View_Helper_FormTextarea
+class Shark_View_Helper_Ckeditor extends Zend_View_Helper_FormTextarea
 {
     /**
     * Number of editor instances in the form.
