@@ -1,14 +1,65 @@
 <?php
+/**
+ * Shark Framework
+ *
+ * LICENSE
+ *
+ * Copyright  Shark Web Intelligence
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @category   Library
+ * @package    Shark
+ * @subpackage Controller.Actions
+ * @author     Saul Martinez <saul@sharkwebintelligence.com>
+ * @copyright  2012 Shark Web Intelligence
+ * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
+ * @version    ${CURRENT_VERSION}
+ * @link       http://www.sharkwebintelligence.com
+ */
+/**
+ * Controller action.
+ *
+ * @category   Library
+ * @package    Shark
+ * @subpackage Controller.Actions
+ * @author     Saul Martinez <saul@sharkwebintelligence.com>
+ * @copyright  2012 Shark Web Intelligence
+ * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
+ * @version    ${CURRENT_VERSION}
+ * @link       http://www.sharkwebintelligence.com
+ */
+class Shark_Controller_Action extends Shark_Controller_Action_Abstract
+{
 
-class Shark_Controller_Action extends Shark_Controller_Action_Abstract {
-	protected $_cache;
+    /**
+     * @var Zend_Cache $_cache Cache object.
+     */
+    protected $cache;
 
-	public function init() {
-		if (APPLICATION_ENV === 'production') {
-			$this->_cache = Zend_Registry::get('Zend_Cache');
-			if ($this->getRequest()->getParam('clear_cache', null) === 'true') {
-				$this->_cache->clean(Zend_Cache::CLEANING_MODE_ALL);
-			}
-		}
-	}
+    /**
+     * Initialize variables.
+     *
+     * @return void
+     */
+    public function init()
+    {
+        parent::init();
+        if (APPLICATION_ENV === 'production') {
+            $this->cache = Zend_Registry::get('Zend_Cache');
+            if ($this->getRequest()->getParam('clear_cache', null) === 'true') {
+                $this->cache->clean(Zend_Cache::CLEANING_MODE_ALL);
+            }
+        }
+    }
 }
