@@ -1,0 +1,14 @@
+<header>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="<?= $this->baseUrl('/') ?>" title="<?= $this->title ?>" class="brand">
+					<?= $this->title ?>
+				</a>
+				<? if ($this->user) : ?>
+				<?= $this->render('_navigation.phtml') ?>
+				<? endif ?>
+			</div>
+		</div>
+	</div>
+</header>

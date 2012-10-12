@@ -1,0 +1,14 @@
+<?
+$this->headTitle($this->translate($this->message));
+?>
+<div class="span12">
+  <div class="alert alert-error">
+    <h1 class="alert-heading">
+      <?= $this->translate($this->message) ?>
+    </h1>
+    <? if (APPLICATION_ENV !== 'production') : ?>
+    <h2><?= $this->error->exception->getMessage() ?></h2>
+    <pre><?= $this->error->exception->getTraceAsString() ?></pre>
+    <? endif ?>
+  </div>
+</div>

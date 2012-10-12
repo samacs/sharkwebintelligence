@@ -1,0 +1,22 @@
+<?= $this->doctype() ?>
+<html>
+<head>
+	<?= $this->headMeta() ?>
+	<?= $this->headTitle() ?>
+	<?= $this->headLink() ?>
+	<?= $this->headStyle() ?>
+	<?= $this->headScript() ?>
+</head>
+<body>
+	<?= $this->render('_header.phtml') ?>
+	<section id="content" role="main">
+		<div class="container">
+			<div class="row">
+				<?= $this->layout()->content ?>
+			</div>
+		</div>
+	</section>
+	<?= $this->render('_footer.phtml') ?>
+	<?= $this->inlineScript() ?>
+</body>
+</html>

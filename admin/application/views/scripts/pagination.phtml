@@ -1,0 +1,74 @@
+<? if ($this->pageCount) : ?>
+<div class="pagination pagination-centered">
+  <ul>
+  <?
+  // First page
+  if (isset($this->previous)) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $this->first)) ?>">
+        <?= $this->translate('SHARK_FIRST') ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="disabled">
+      <span><?= $this->translate('SHARK_FIRST') ?></span>
+    </li>
+  <? endif ?>
+  <?
+  // Previous page
+  if (isset($this->previous)) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $this->previous)) ?>">
+        <?= $this->translate('SHARK_PREVIOUS') ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="disabled">
+      <span><?= $this->translate('SHARK_PREVIOUS') ?></span>
+    </li>
+  <? endif ?>
+  <?
+  // Numbered page links
+  foreach ($this->pagesInRange as $page) : ?>
+  <? if ($page != $this->current) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $page)) ?>">
+        <?= $page ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="active">
+      <span><?= $page ?></span>
+    </li>
+  <? endif ?>
+  <? endforeach ?>
+  <?
+  // Next page
+  if (isset($this->next)) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $this->next)) ?>">
+        <?= $this->translate('SHARK_NEXT') ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="disabled">
+      <span><?= $this->translate('SHARK_NEXT') ?></span>
+    </li>
+  <? endif ?>
+  <?
+  // Last page
+  if (isset($this->next)) : ?>
+    <li>
+      <a href="<?= $this->url() . '?' . http_build_query(array('page' => $this->last)) ?>">
+        <?= $this->translate('SHARK_LAST') ?>
+      </a>
+    </li>
+  <? else : ?>
+    <li class="disabled">
+      <span><?= $this->translate('SHARK_LAST') ?></span>
+    </li>
+  <? endif ?>
+  </ul>
+  <p><?= $this->translate('SHARK_PAGE_COUNT', $this->current, $this->pagesInRange) ?>
+</div>
+<? endif ?>

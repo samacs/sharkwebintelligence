@@ -1,0 +1,10 @@
+<div class="span12">
+	<? if ($this->message) : ?>
+	<div class="alert alert-error">
+		<a href="#" data-dismiss="alert" class="close">*</a>
+		<h4 class="alert-heading">Error</h4>
+		<p><?= $this->message ?></p>
+	</div>
+	<? endif ?>
+	<?= $this->form ?>
+</div>

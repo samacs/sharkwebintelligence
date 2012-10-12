@@ -1,0 +1,59 @@
+<div class="row-fluid">
+    <div class="span12">
+        <? if (count($this->items)): ?>
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <? foreach ($this->headers AS $header) : ?>
+                    <th><?= $header ?></th>
+                    <? endforeach ?>
+                    <? if ($this->canUpdate || $this->canDelete): ?>
+                    <th><?= $this->translate('SHARK_SCAFFOLD_HEADING_OPRATIONS') ?></th>
+                    <? endif ?>
+                </tr>
+            </thead>
+            <tbody>
+                <? foreach ($this->items as $entry) : ?>
+                <tr>
+                    <?
+                    foreach($entry as $field => $value) :
+                        if ($field != 'pkParams') : ?>
+                    <td><?= $value ?></td>
+                    <? endif;
+                    endforeach ?>
+                    <? if ($this->canUpdate || $this->canDelete) : ?>
+                    <td>
+                        <div class="btn-group">
+                            <? if ($this->canUpdate) :
+                                $params = isset($this->actionParams['update'])
+                                    ? $this->actionParams['update']
+                                    : array();
+                            ?>
+                            <a href="<?= $this->url(array_merge($entry['pkParams'], $params), $this->updateRoute, true) ?>" class="btn btn-large btn-primary">
+                                <?= $this->translate('SHARK_BUTTON_UPDATE') ?>
+                            </a>
+                            <? endif ?>
+                            <? if ($this->canDelete) :
+                                $params = isset($this->actionParams['delete'])
+                                    ? $this->actionParams['delete']
+                                    : array();
+                            ?>
+                            <a href="<?= $this->url(array_merge($entry['pkParams'], $params), $this->deleteRoute, true) ?>" onclick="return confirm('<?= $this->translate('Do you really want to delete the selected %1$s?', $this->entityTitle) ?>');" class="btn btn-large btn-danger">
+                                <?= $this->translate('SHARK_BUTTON_DELETE') ?>
+                            </a>
+                            <? endif ?>
+                        </div>
+                    </td>
+                    <? endif ?>
+                </tr>
+                <? endforeach ?>
+            </tbody>
+        </table>
+        <? if (isset($this->paginator)) : ?>
+        <?= $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml') ?>
+        <? endif ?>
+        <? else : ?>
+        <p><strong><?= $this->translate('SHARK_SCAFFOLD_NO_RECORDS_FOUND') ?></strong></p>
+        <? endif ?>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<ul class="nav">
+	<li class="dropdown">
+		<a href="#" data-toggle="dropdown" id="blogDropdownLabel" class="dropdown-toggle">Blog <b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="blogDropdownLabel">
+			<li>
+				<a href="<?= $this->url(array(), 'admin_categories_list') ?>">
+					<?= $this->translate('BLOG_MENU_CATEGORIES') ?>
+				</a>
+			</li>
+			<li>
+				<a href="<?= $this->url(array(), 'admin_posts_list') ?>">
+					<?= $this->translate('BLOG_MENU_POSTS') ?>
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul class="nav pull-right">
+	<li>
+		<a href="<?= $this->serverUrl() ?>" target="_blank">
+			<?= $this->translate('SHARK_VIEW_SITE') ?>
+		</a>
+	</li>
+	<li class="divider-vertical"></li>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="accountDropdownLabel">
+			<?= $this->translate('SHARK_ACCOUNT') ?> <b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu" role="menu" arial-labelledby="accountDropdownLabel">
+			<li>
+				<a href="#">
+					<?= $this->translate('SHARK_PROFILE') ?>
+				</a>
+			</li>
+			<li>
+				<a href="<?= $this->url(array(), 'admin_auth_logout') ?>">
+					<?= $this->translate('SHARK_LOGOUT') ?>
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>

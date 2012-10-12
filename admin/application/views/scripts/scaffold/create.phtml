@@ -1,0 +1,8 @@
+<div class="span12">
+	<?= $this->partial('scaffold/messages.phtml', $this) ?>
+	<a href="<?= $this->url(array('module' => $this->module, 'controller' => $this->controller, 'action' => 'index'), $this->indexRoute, true) ?>" class="btn btn-large">
+	  <?= $this->translate('SHARK_SCAFFOLD_BACK_TO_LIST') ?>
+	</a>
+	<h3><?= isset($this->createEntityText) ? $this->createEntityText : $this->translate('SHARK_SCAFFOLD_NEW_ENTITY', $this->entityTitle) ?></h3>
+	<?= $this->form ?>
+</div>
