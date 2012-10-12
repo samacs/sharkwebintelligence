@@ -41,4 +41,31 @@
  */
 class Admin_Model_Users extends Shark_Model_Abstract
 {
+    /**
+     * Find user by his username.
+     *
+     * @param string $username Username.
+     *
+     * @return Admin_Entity_User
+     */
+    public function findByUsername($username)
+    {
+        $select = $this->select();
+        $select->where('username = ?', $username);
+        return $this->fetchRow($select);
+    }
+
+    /**
+     * Find user by his email.
+     *
+     * @param string $email User email.
+     *
+     * @return Admin_Entity_User
+     */
+    public function findByEmail($email)
+    {
+        $select = $this->select();
+        $select->where('email = ?', $email);
+        return $this->fetchRow($select);
+    }
 }
