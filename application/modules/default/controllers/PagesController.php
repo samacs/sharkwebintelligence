@@ -33,9 +33,9 @@ class PagesController extends Shark_Controller_Action {
 	public function viewAction() {
 		$script = implode('/', array($this->_path, $this->getRequest()->getParam($this->_param, null)));
 		if (APPLICATION_ENV === 'production') {
-			if (($content = $this->_cache->load($this->_tag)) === false) {
+			if (($content = $this->cache->load($this->_tag)) === false) {
 				$content = $this->view->render('pages' . DS . $script . '.phtml');
-				$this->_cache->save($content, $this->_tag);
+				$this->cache->save($content, $this->_tag);
 			}
 			$this->view->content = $content;
 		} else {
