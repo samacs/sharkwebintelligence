@@ -79,7 +79,6 @@ class Admin_AuthController extends Shark_Controller_Action
                     $message = 'Error desconocido';
                     break;
                 }
-                var_dump($result);
             }
         }
         $this->view->assign(
