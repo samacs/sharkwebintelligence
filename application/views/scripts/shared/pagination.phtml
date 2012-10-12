@@ -11,7 +11,7 @@
     </li>
   <? else : ?>
     <li class="disabled">
-      <span><?= $this->translate('&lsaquo;') ?></span>
+      <span><a href="#"><?= $this->translate('&lsaquo;') ?></a></span>
     </li>
   <? endif ?>
   <?
@@ -24,7 +24,7 @@
     </li>
   <? else : ?>
     <li class="disabled">
-      <span><?= $this->translate('&lsaquo;&lsaquo;') ?></span>
+      <span><a href="#"><?= $this->translate('&lsaquo;&lsaquo;') ?></a></span>
     </li>
   <? endif ?>
   <?
@@ -38,7 +38,7 @@
     </li>
   <? else : ?>
     <li class="active">
-      <span><?= $page ?></span>
+      <span><a href="#"><?= $page ?></a></span>
     </li>
   <? endif ?>
   <? endforeach ?>
@@ -52,7 +52,7 @@
     </li>
   <? else : ?>
     <li class="disabled">
-      <span><?= $this->translate('&rsaquo;&rsaquo;') ?></span>
+      <span><a href="#"><?= $this->translate('&rsaquo;&rsaquo;') ?></a></span>
     </li>
   <? endif ?>
   <?
@@ -65,7 +65,7 @@
     </li>
   <? else : ?>
     <li class="disabled">
-      <span><?= $this->translate('&rsaquo;') ?></span>
+      <span><a href="#"><?= $this->translate('&rsaquo;') ?></a></span>
     </li>
   <? endif ?>
   </ul>
