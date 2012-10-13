@@ -6,3 +6,4 @@ Disallow: /data/
 Disallow: /min/
 Disallow: /newsletter/
 Disallow: /livehelp/
+Disallow: /admin/

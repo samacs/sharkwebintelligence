@@ -81,7 +81,7 @@ class Blog_RssController extends Shark_Controller_Action
             $month = $date->toString(Zend_Date::MONTH);
             $day = $date->toString(Zend_Date::DAY);
             $model = new Model_Posts();
-            $posts = $model->getPosts($year, $month, $day, $this->limit);
+            $posts = $model->getPosts($year, $month, $day, $this->limit, 0, null, 'created_at DESC');
         }
         return $this->_sendFeed($title, $description, $link, $posts);
     }

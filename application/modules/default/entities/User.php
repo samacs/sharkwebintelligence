@@ -48,7 +48,33 @@ class Entity_User extends Zend_Db_Table_Row_Abstract
      */
     public function getPosts()
     {
-        return $this->findDependentRowset('Table_Posts');
+        /*
+        $table = $this->getTable()->getAdapter();
+        $select = $table->select();
+        $select->from(array('p' => 'blog_posts'), array('p.*', 'zend_paginator_row_count' => new Zend_Db_Expr('COUNT(p.*)')))
+            ->joinInner(array('u' => 'core_users'), 'u.*');
+        $select->where('p.user_id = ?', $this->id);
+        $adapter = new Zend_Paginator_Adapter_DbTableSelect($select);
+        $count = clone $select;
+        $count->reset(Zend_Db_Select::COLUMNS);
+        $count->reset(Zend_Db_Select::FROM);
+        $count->from(
+            array('p' => 'blog_posts'), array('zend_paginator_row_count' => new Zend_Db_Expr('COUNT(*)'))
+        )->joinInner(array('u' => 'core_users'), 'u.id = p.user_id');
+        $adapter->setRowCount($count);
+        $paginator = new Zend_Paginator($adapter);
+        var_dump($paginator);
+        exit;
+        foreach ($paginator as $item) {
+            var_dump($item);
+        }
+        exit;
+        return $paginator;
+        var_dump($paginator);
+        exit;
+        */
+        $posts = $this->findDependentRowset('Table_Posts', null, $this->getTable()->select()->order('created_at DESC'));
+        return $posts;
     }
 
     /**
