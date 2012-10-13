@@ -96,7 +96,7 @@ class Shark_View extends Zend_View
         // JavaScript
         $this->minifyHeadScript()->prependFile($this->baseUrl('/js/modernizr.min.js'));
         $this->minifyHeadScript()->appendFile('http://sharkwebintelligence.com/livehelp/include/javascript.php');
-        $this->minifyInlineScript()->prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js');
+        $this->minifyInlineScript()->prependFile('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js');
         $this->minifyInlineScript()->appendScript('window.jQuery || document.write(\'<script src="' . $this->baseUrl('/js/jquery.min.js') . '"><\/script>\');');
         if ($site->bootstrap) {
             $this->minifyInlineScript()->appendFile($this->baseUrl('/js/bootstrap.min.js'));
