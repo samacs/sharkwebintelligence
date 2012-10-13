@@ -18,9 +18,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @category   Shark
- * @package    Admin
- * @subpackage Forms
+ * @category   Library
+ * @package    Shark
+ * @subpackage Version
  * @author     Saul Martinez <saul@sharkwebintelligence.com>
  * @copyright  2012 Shark Web Intelligence
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
@@ -28,55 +28,51 @@
  * @link       http://www.sharkwebintelligence.com
  */
 /**
- * Login form.
+ * Framework version.
  *
- * @category   Shark
- * @package    Admin
- * @subpackage Forms
+ * @category   Library
+ * @package    Shark
+ * @subpackage Version
  * @author     Saul Martinez <saul@sharkwebintelligence.com>
  * @copyright  2012 Shark Web Intelligence
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
  * @version    ${CURRENT_VERSION}
  * @link       http://www.sharkwebintelligence.com
  */
-class Admin_Form_User_Login extends Admin_Form_User
+class Shark_Version
 {
     /**
-     * Initialize form.
-     *
-     * @return void
+     * Shark Framework version.
      */
-    public function init()
+    const VERSION = '1.0';
+
+    /**
+     * @var string $_productName Product name
+     */
+    private static $_productName = 'Shark Web Intelligence v%s';
+
+    /**
+     * Gets the current framework version.
+     *
+     * @return string Current version.
+     */
+    public static function getProductName()
     {
-        parent::init();
+        return sprintf(self::$_productName, self::VERSION);
+    }
 
-        $this->setName('form-user-login');
-
-        $removedElements = array(
-            'name',
-            'email',
-            'bio',
-            'password_confirm',
-            'gplus_profile',
-            'twitter_profile',
-            'facebook_profile',
-        );
-
-        foreach ($removedElements as $element) {
-            $this->removeElement($element);
-        }
-
-        $this->getElement('password')->removeValidator('PasswordConfirm');
-
-        $this->addElement(
-            'button',
-            'login',
-            array(
-                'label' => 'Login',
-                'ignore' => true,
-                'type' => 'submit',
-                'class' => 'btn btn-success btn-large',
-            )
-        );
+    /**
+     * Compare the specified Shark Framework version string $version
+     * with the current Shark_Version::VERSION of Shark Framework.
+     *
+     * @param string $version A version string (e.g. "0.7.1").
+     *
+     * @return int -1 If the $version is older, 0 if they are the same, and +1 if $version is newer.
+     */
+    public static function compareVersion($version)
+    {
+        $version = strtolower($version);
+        $version = preg_replace('/(\d)pr(\d?)/', '$1a$2', $version);
+        return version_compare($version, strtolower(self::VERSION));
     }
 }

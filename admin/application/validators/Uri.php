@@ -20,7 +20,7 @@
  *
  * @category   Shark
  * @package    Admin
- * @subpackage Forms
+ * @subpackage Validate
  * @author     Saul Martinez <saul@sharkwebintelligence.com>
  * @copyright  2012 Shark Web Intelligence
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
@@ -28,55 +28,45 @@
  * @link       http://www.sharkwebintelligence.com
  */
 /**
- * Login form.
+ * Validates URL.
  *
  * @category   Shark
  * @package    Admin
- * @subpackage Forms
+ * @subpackage Validate
  * @author     Saul Martinez <saul@sharkwebintelligence.com>
  * @copyright  2012 Shark Web Intelligence
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
  * @version    ${CURRENT_VERSION}
  * @link       http://www.sharkwebintelligence.com
  */
-class Admin_Form_User_Login extends Admin_Form_User
+class Admin_Validate_Uri extends Zend_Validate_Abstract
 {
+    const NOT_VALID = 'notValid';
+
     /**
-     * Initialize form.
-     *
-     * @return void
+     * @var array $_messageTemplates Message tempates.
      */
-    public function init()
+    // @codingStandardsIgnoreStart
+    protected $_messageTemplates = array(
+        self::NOT_VALID => 'SHARK_VALIDATE_URI_NOT_VALID',
+    );
+    // @codingStandardsIgnoreEnd
+
+    /**
+     * Checks if value is a valid URI.
+     *
+     * @param string $value Value to check.
+     *
+     * @return boolean
+     */
+    public function isValid($value)
     {
-        parent::init();
-
-        $this->setName('form-user-login');
-
-        $removedElements = array(
-            'name',
-            'email',
-            'bio',
-            'password_confirm',
-            'gplus_profile',
-            'twitter_profile',
-            'facebook_profile',
-        );
-
-        foreach ($removedElements as $element) {
-            $this->removeElement($element);
+        $value = (string)$value;
+        $this->_setValue($value);
+        if (Zend_Uri::check($value)) {
+            return true;
         }
-
-        $this->getElement('password')->removeValidator('PasswordConfirm');
-
-        $this->addElement(
-            'button',
-            'login',
-            array(
-                'label' => 'Login',
-                'ignore' => true,
-                'type' => 'submit',
-                'class' => 'btn btn-success btn-large',
-            )
-        );
+        $this->_error(self::NOT_VALID);
+        return false;
     }
 }

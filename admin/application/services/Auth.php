@@ -132,7 +132,9 @@ class Admin_Service_Auth extends Shark_Service_Abstract
         if ($result->isValid()) {
             $storage = $this->_auth->getStorage();
             $user = $this->_adapter->getResultRowObject(null, array('password', 'salt'));
-            $storage->write($user);
+            $model = new Admin_Model_Users();
+            $user = $model->find($user->id)->current();
+            $storage->write(serialize($user));
             $session = new Zend_Session_Namespace('Zend_Auth');
             $session->setExpirationSeconds(3600);
             $session->user = $user;

@@ -1,2 +1,12 @@
 <footer>
+	<div class="container">
+		<div class="row">
+			<div class="span6 offset3">
+				<div class="copyright" style="text-align: center;">
+					<p><a title="<?= $this->title ?>" href="<?= $this->serverUrl() ?>"><?= $this->title ?></a> &copy; <?= Zend_Date::now()->toString(Zend_Date::YEAR) ?></p>
+					<?= Shark_Version::getProductName() ?>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>

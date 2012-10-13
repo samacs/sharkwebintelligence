@@ -59,7 +59,6 @@ $link = array(
 	</div>
 </div>
 <div class="span9 content left hentry" id="blog-post">
-
 	<article class="post">
 		<header>
 			<time class="date" datetime="<?= $this->post->created_at ?>">
@@ -79,4 +78,7 @@ $link = array(
 			</a>
 		</footer>
 	</article>
+	<div id="comments">
+		<div class="fb-comments" data-href="<?= $this->absoluteUrl($this->url()) ?>" data-num-posts="<?= $this->comments_limit ?>"></div>
+	</div>
 </div>

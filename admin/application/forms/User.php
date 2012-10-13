@@ -51,11 +51,17 @@ class Admin_Form_User extends Shark_Form
         $this->setName('form-user');
         $this->setMethod('post');
 
+        $this->addElementPrefixPath(
+            'Admin_Validate',
+            APPLICATION_PATH . DS . 'validators',
+            'validate'
+        );
+
         $this->addElement(
             'text',
             'name',
             array(
-                'label' => 'Nombre',
+                'label' => 'USERS_FORM_NAME_LABEL',
                 'required' => true,
                 'filters' => array(
                     'StripTags',
@@ -68,7 +74,7 @@ class Admin_Form_User extends Shark_Form
             'text',
             'email',
             array(
-                'label' => 'Email',
+                'label' => 'USERS_FORM_EMAIL_LABEL',
                 'required' => true,
                 'filters' => array(
                     'StripTags',
@@ -85,7 +91,7 @@ class Admin_Form_User extends Shark_Form
             'text',
             'username',
             array(
-                'label' => 'Username',
+                'label' => 'USERS_FORM_USERNAME_LABEL',
                 'required' => true,
                 'filters' => array(
                     'StripTags',
@@ -99,13 +105,101 @@ class Admin_Form_User extends Shark_Form
             'password',
             'password',
             array(
-                'label' => 'Password',
+                'label' => 'USERS_FORM_PASSWORD_LABEL',
                 'required' => true,
+                'filters' => array(
+                    'StripTags',
+                    'StringTrim',
+                ),
+                'validators' => array(
+                    'PasswordConfirm',
+                ),
+            )
+        );
+
+        $this->addElement(
+            'password',
+            'password_confirm',
+            array(
+                'label' => 'USERS_FORM_PASSWORD_CONFIRM_LABEL',
+                'required' => false,
                 'filters' => array(
                     'StripTags',
                     'StringTrim',
                 ),
             )
         );
+
+        $this->addElement(
+            'ckeditor',
+            'bio',
+            array(
+                'label' => 'SHARK_FORM_BIO_LABEL',
+                'required' => false,
+                'filters' => array(
+                    'StringTrim',
+                ),
+            )
+        );
+
+        $this->addElement(
+            'text',
+            'gplus_profile',
+            array(
+                'label' => 'SHARK_FORM_GPLUS_PROFILE_LABEL',
+                'required' => true,
+                'filters' => array(
+                    'StringTrim',
+                    'StripTags',
+                ),
+                'validators' => array(
+                    'NotEmpty',
+                    'Uri',
+                ),
+            )
+        );
+
+        $this->addElement(
+            'text',
+            'twitter_profile',
+            array(
+                'label' => 'SHARK_FORM_TWITTER_PROFILE_LABEL',
+                'required' => true,
+                'filters' => array(
+                    'StringTrim',
+                    'StripTags',
+                ),
+                'validators' => array(
+                    'NotEmpty',
+                    'Uri',
+                ),
+            )
+        );
+
+        $this->addElement(
+            'text',
+            'facebook_profile',
+            array(
+                'label' => 'SHARK_FORM_FACEBOOK_PROFILE_LABEL',
+                'required' => true,
+                'filters' => array(
+                    'StringTrim',
+                    'StripTags',
+                ),
+                'validators' => array(
+                    'NotEmpty',
+                    'Uri',
+                ),
+            )
+        );
+
+        $this->addElement(
+            'hash',
+            'csrf',
+            array(
+                'salt' => 'unique',
+            )
+        );
+
     }
 }

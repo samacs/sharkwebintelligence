@@ -74,7 +74,7 @@ class Shark_Controller_Action_Abstract extends Zend_Controller_Action
     {
         $auth = Zend_Auth::getInstance();
         if ($auth->hasIdentity()) {
-            $this->user = $auth->getIdentity();
+            $this->user = unserialize($auth->getIdentity());
         }
         $this->assign(array('user' => $this->user));
     }

@@ -35,6 +35,7 @@ $link = array(
 	</div>
 	<footer>
 		<div itemprop="author" class="hcard" itemscope itemtype="http://schema.org/Person">
+			<iframe src="http://facebook.com/plugins/comments.php?href=<?= $this->absoluteUrl($this->url($link, 'blog-post')) ?>&permalink=1" scrolling="no" style="overflow: hidden; border: none; width: 130px; height: 16px;" allowTransparency="true"></iframe>
 			<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" rel="author" title="<?= $this->post->author->name ?>" itemprop="name" class="author">
 				<?= $this->post->author->name ?>
 			</a>

@@ -1512,3 +1512,17 @@ div.livehelp-container a:hover {
   white-space: nowrap;
   margin-right: 10px;
 }
+
+/* line 1006, ../sass/screen.sass */
+#fb_comments,
+.fb_iframe_widget,
+.fb_iframe_widget[style],
+.fb_iframe_widget iframe[style],
+#fb_comments iframe[style] {
+  width: 100% !important;
+}
+
+/* line 1013, ../sass/screen.sass */
+.fb-comments > span {
+  width: 100% !important;
+}

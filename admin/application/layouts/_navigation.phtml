@@ -25,11 +25,12 @@
 	<li class="divider-vertical"></li>
 	<li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="accountDropdownLabel">
-			<?= $this->translate('SHARK_ACCOUNT') ?> <b class="caret"></b>
+			<?= $this->gravatar($this->user->email, array('imgSize' => 20)) ?>
+			<?= $this->user->name ?> <b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu" role="menu" arial-labelledby="accountDropdownLabel">
 			<li>
-				<a href="#">
+				<a href="<?= $this->url(array(), 'admin_users_account') ?>" title="<?= $this->translate('SHARK_PROFILE') ?>">
 					<?= $this->translate('SHARK_PROFILE') ?>
 				</a>
 			</li>

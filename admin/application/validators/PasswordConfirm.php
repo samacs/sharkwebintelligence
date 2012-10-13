@@ -20,7 +20,7 @@
  *
  * @category   Shark
  * @package    Admin
- * @subpackage Forms
+ * @subpackage Validators
  * @author     Saul Martinez <saul@sharkwebintelligence.com>
  * @copyright  2012 Shark Web Intelligence
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
@@ -28,55 +28,52 @@
  * @link       http://www.sharkwebintelligence.com
  */
 /**
- * Login form.
+ * Password confirmation validator.
  *
  * @category   Shark
  * @package    Admin
- * @subpackage Forms
+ * @subpackage Validators
  * @author     Saul Martinez <saul@sharkwebintelligence.com>
  * @copyright  2012 Shark Web Intelligence
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
  * @version    ${CURRENT_VERSION}
  * @link       http://www.sharkwebintelligence.com
  */
-class Admin_Form_User_Login extends Admin_Form_User
+class Admin_Validate_PasswordConfirm extends Zend_Validate_Abstract
 {
+    const NOT_MATCH = 'notMatch';
+
     /**
-     * Initialize form.
-     *
-     * @return void
+     * @var array $_messageTemplates Message templates.
      */
-    public function init()
+    // @codingStandardsIgnoreStart
+    protected $_messageTemplates = array(
+        self::NOT_MATCH => 'SHARK_VALIDATE_PASSWORDCONFIRM_NOT_MATCH',
+    );
+    // @codingStandardsIgnoreEnd
+
+    /**
+     * Checks if password confirmation is valid.
+     *
+     * @param mixed $value   Current value.
+     * @param mixed $context Current context.
+     *
+     * @return boolean
+     */
+    public function isValid($value, $context = null)
     {
-        parent::init();
-
-        $this->setName('form-user-login');
-
-        $removedElements = array(
-            'name',
-            'email',
-            'bio',
-            'password_confirm',
-            'gplus_profile',
-            'twitter_profile',
-            'facebook_profile',
-        );
-
-        foreach ($removedElements as $element) {
-            $this->removeElement($element);
+        $value = (string)$value;
+        $this->_setValue($value);
+        if (is_array($context)) {
+            if (isset($context['password_confirm'])
+                && ($value == $context['password_confirm'])
+            ) {
+                return true;
+            }
+        } else if (is_string($context) && $value == $context) {
+            return true;
         }
-
-        $this->getElement('password')->removeValidator('PasswordConfirm');
-
-        $this->addElement(
-            'button',
-            'login',
-            array(
-                'label' => 'Login',
-                'ignore' => true,
-                'type' => 'submit',
-                'class' => 'btn btn-success btn-large',
-            )
-        );
+        $this->_error(self::NOT_MATCH);
+        return false;
     }
 }
