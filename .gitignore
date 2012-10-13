@@ -9,10 +9,8 @@ library/Zend
 *error_log
 impresoratecnica
 *php.ini
-blog/wp-content/cache/*
-!blog/wp-content/cache/.htaccess
 expreso
 newsletter
 livehelp
 dumps
-scripts
+/scripts
