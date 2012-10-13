@@ -84,10 +84,12 @@ class Blog_PostsController extends Shark_Controller_Action
         $day = $request->getParam('day', $now->toString('dd'));
         $model = new Model_Posts();
         $posts = $model->getPosts($year, $month, $day, $this->limit, $this->page, null, array('created_at DESC'));
+        $usersModel = new Model_Users();
         $this->view->assign(
             array(
                 'posts' => $posts,
                 'now' => $now,
+                'authors' => $usersModel->findAll(),
             )
         );
     }

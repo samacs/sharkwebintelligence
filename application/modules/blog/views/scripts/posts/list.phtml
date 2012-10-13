@@ -10,6 +10,9 @@ $this->headMeta()->setName('author', 'Shark Web Intelligence');
 $this->headMeta()->setName('description', 'Blog');
 $this->partialLoop()->setObjectKey('post');
 $this->minifyHeadLink()->appendAlternate($this->absoluteUrl($this->url(array(), 'rss-blog')), 'application/xml-rss', implode(' - ', $this->headTitle()->getValue()));
+foreach ($this->authors as $author) {
+	$this->minifyHeadLink()->appendAlternate($this->absoluteUrl($this->url(array('username' => $author->username), 'rss-blog-author')), 'application/xml-rss', implode(' - ', $this->headTitle()->getValue()) . ' - ' . $author->name);
+}
 ?>
 <div class="span12">
 	<div class="jumbo">

@@ -1,0 +1,82 @@
+<?php
+/**
+ * Shark Framework
+ *
+ * LICENSE
+ *
+ * Copyright  Shark Web Intelligence
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @category   Shark
+ * @package    Admin
+ * @subpackage Views.Users
+ * @author     Saul Martinez <saul@sharkwebintelligence.com>
+ * @copyright  2012 Shark Web Intelligence
+ * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
+ * @version    ${CURRENT_VERSION}
+ * @link       http://www.sharkwebintelligence.com
+ */
+?>
+<form name="<?= $this->form->getName() ?>" method="<?= $this->form->getMethod() ?>">
+	<? if ($this->message) : ?>
+	<div class="alert alert-warning">
+		<a class="close" data-dismiss="alert">x</a>
+		<p><?= $this->message ?></p>
+	</div>
+	<? endif ?>
+	<? if (!empty($this->errors)) : ?>
+	<div class="alert alert-error">
+		<a class="close" data-dismiss="alert">x</a>
+		<? foreach ($this->errors as $error) : ?>
+		<h4 class="alert-heading">
+			<?= $error->field ?>
+		</h4>
+		<p><?= $error->message ?></p>
+		<? endforeach ?>
+	</div>
+	<? endif ?>
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a href="#profile" data-toggle="tab"><?= $this->translate('SHARK_PROFILE') ?></a>
+		</li>
+		<li>
+			<a href="#social" data-toggle="tab"><?= $this->translate('SHARK_SOCIAL_NETWORKS') ?></a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="profile">
+			<div class="row-fluid">
+				<div class="span4">
+					<?= $this->form->getElement('name') ?>
+					<?= $this->form->getElement('username') ?>
+					<?= $this->form->getElement('email') ?>
+					<?= $this->form->getElement('password') ?>
+					<?= $this->form->getElement('password_confirm') ?>
+				</div>
+				<div class="span8">
+					<?= $this->form->getElement('bio') ?>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane" id="social">
+			<?= $this->form->getElement('gplus_profile') ?>
+			<?= $this->form->getElement('twitter_profile') ?>
+			<?= $this->form->getElement('facebook_profile') ?>
+		</div>
+	</div>
+	<div class="form-actions">
+		<button type="submit" class="btn btn-primary btn-large"><?= $this->translate('SHARK_BUTTON_SAVE') ?></button>
+	</div>
+	<?= $this->form->getElement('csrf') ?>
+</form>
