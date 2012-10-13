@@ -9,6 +9,7 @@ $this->headTitle('Blog');
 $this->headMeta()->setName('author', 'Shark Web Intelligence');
 $this->headMeta()->setName('description', 'Blog');
 $this->partialLoop()->setObjectKey('post');
+$this->minifyHeadLink()->appendAlternate($this->absoluteUrl($this->url(array(), 'rss-blog')), 'application/xml-rss', implode(' - ', $this->headTitle()->getValue()));
 ?>
 <div class="span12">
 	<div class="jumbo">

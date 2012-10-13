@@ -29,9 +29,10 @@
  */
 $this->partialLoop()->setObjectKey('post');
 
-$this->headTitle($this->author->name);
+$this->headTitle('Blog - ' . $this->author->name);
 $this->headMeta()->setName('author', $this->author->name);
 $this->headMeta()->setName('description', 'Artículos por: ' . $this->author->name);
+$this->minifyHeadLink()->appendAlternate($this->absoluteUrl($this->url(array('username' => $this->author->username), 'rss-blog-author')), 'application/xml-rss', implode(' - ', $this->headTitle()->getValue()));
 ?>
 <? if ($this->author) : ?>
 <div class="span12">

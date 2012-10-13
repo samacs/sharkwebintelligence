@@ -27,6 +27,8 @@
  * @version    ${CURRENT_VERSION}
  * @link       http://www.sharkwebintelligence.com
  */
+$this->headTitle('Blog - ' . $this->category->title);
+$this->minifyHeadLink()->appendAlternate($this->absoluteUrl($this->url(array('category_alias' => $this->category->alias), 'rss-blog')), 'application/xml-rss', implode(' - ', $this->headTitle()->getValue()));
 $this->partialLoop()->setObjectKey('post');
 ?>
 <? if ($this->category) : ?>

@@ -234,6 +234,28 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		);
 		$router->addRoute('local-marketing-pages', $route);
 
+		$route = new Zend_Controller_Router_Route(
+			'/rss/blog/:category_alias',
+			array(
+				'module' => 'blog',
+				'controller' => 'rss',
+				'action' => 'blog',
+				'category_alias' => null,
+			)
+		);
+		$router->addRoute('rss-blog', $route);
+
+		$route = new Zend_Controller_Router_Route(
+			'/rss/blog/autor/:username',
+			array(
+				'module' => 'blog',
+				'controller' => 'rss',
+				'action' => 'author',
+				'username' => null,
+			)
+		);
+		$router->addRoute('rss-blog-author', $route);
+
 		$router->removeDefaultRoutes();
 	}
 
