@@ -86,6 +86,7 @@
 						<service>publicidad-en-google</service>
 					</params>
 				</publicidad_en_google>
+				<!--
 				<publicidad_en_facebook>
 					<label>Publicidad en Facebook</label>
 					<title>Publicidad en Facebook</title>
@@ -94,6 +95,7 @@
 						<service>publicidad-en-facebook</service>
 					</params>
 				</publicidad_en_facebook>
+				-->
 				<email_marketing>
 					<label>e-Mail Marketing</label>
 					<title>e-Mail Marketing</title>
@@ -178,14 +180,14 @@
 				<page>portafolio</page>
 			</params>
 			<pages>
-				<periodico_expreso>
-					<label>Periódico Expreso</label>
-					<title>Periódico Expreso</title>
+				<baja_salads>
+					<label>Baja Salads</label>
+					<title>Baja Salads Deli Express</title>
 					<route>clients</route>
 					<params>
-						<client>periodico-expreso</client>
+						<client>baja-salads</client>
 					</params>
-				</periodico_expreso>
+				</baja_salads>
 				<azteca_sonora>
 					<label>Azteca Sonora</label>
 					<title>Azteca Sonora</title>
@@ -194,6 +196,14 @@
 						<client>azteca-sonora</client>
 					</params>
 				</azteca_sonora>
+				<periodico_expreso>
+					<label>Periódico Expreso</label>
+					<title>Periódico Expreso</title>
+					<route>clients</route>
+					<params>
+						<client>periodico-expreso</client>
+					</params>
+				</periodico_expreso>
 				<verano_con_coki>
 					<label>Verano con Coki</label>
 					<title>Campamento Verano con Coki</title>
@@ -218,21 +228,15 @@
 						<client>all-dental</client>
 					</params>
 				</all_dental>
-				<baja_salads>
-					<label>Baja Salads</label>
-					<title>Baja Salads Deli Express</title>
-					<route>clients</route>
-					<params>
-						<client>baja-salads</client>
-					</params>
-				</baja_salads>
 			</pages>
 		</portfolio>
-		<!--<blog>
+		<!--
+		<blog>
 			<label>Blog</label>
 			<title>Blog</title>
-			<uri>blog</uri>
-		</blog> -->
+			<route>blog</route>
+		</blog>
+		-->
 		<contact>
 			<label>Contacto</label>
 			<title>Contáctenos</title>
