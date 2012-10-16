@@ -8,6 +8,11 @@ $text-color: #555
 $container-desktop-width: 1000px
 $container-wide-width: 1170px + 120px
 
+@import variables
+
+@import bootstrap/bootstrap
+@import bootstrap/responsive
+
 *
 	margin: 0
 	padding: 0
@@ -49,7 +54,7 @@ ul
 	font-family: 'Lato', sans-serif
 	[class*="span"]
 		margin-left: 0
-		margin-right: 20px
+		margin-right: 10px
 	[class*="span"].last
 		margin-right: 0
 	p
@@ -202,6 +207,7 @@ a
 a.more-link
 	border-bottom: 1px dotted #e6e6e6
 	padding-bottom: 5px
+	margin-right: 20px
 
 .jumbo
 	h1,
@@ -225,7 +231,7 @@ a.more-link
 	margin-bottom: -1px
 	#logo
 		float: left
-		h1
+		h3
 			width: 205px
 			height: 70px
 			a
@@ -246,13 +252,18 @@ a.more-link
 			font-weight: bold
 
 .jumbo
-	width: 100%
-	float: left
+	background: #f9f9f9
 	border-top: 1px solid #f0f0f0
 	border-bottom: 1px solid #f0f0f0
 	margin: 0 -60px 0 -60px
 	padding: 30px 60px
-	background: #f9f9f9
+/*
+	.jumbo
+		border-top: 1px solid #f0f0f0
+		border-bottom: 1px solid #f0f0f0
+		margin: 0 -60px 0 -60px
+		padding: 30px 60px
+		background: #f9f9f9
 
 #main-carousel
 	//width: 100%
@@ -264,9 +275,7 @@ a.more-link
 	//background: #f9f9f9#
 
 #services
-	float: left
-	padding: 30px 0
-	width: 100%
+	padding: 30px 10px
 #services-overview
 	padding-top: 20px
 	float: left
@@ -338,7 +347,9 @@ a.more-link
 	a
 		color: #333
 	.team-social
-		img.profile
+		.profile
+			img
+				width: 100%
 			border: 1px solid #ddd
 			padding: 3px
 		ul
@@ -489,6 +500,12 @@ a.more-link
 			a
 				font-weight: bold
 				color: #333
+
+.navbar .nav > .active > a
+	+box-shadow(none)
+	&:hover
+		+box-shadow(none)
+
 .header
 	.nav
 		margin-bottom: 0
@@ -500,6 +517,7 @@ a.more-link
 			color: #333
 			font-family: 'Lato', sans-serif
 			float: right
+			padding: 0 15px 0
 			ul.nav
 				li
 					text-align: left
@@ -510,6 +528,7 @@ a.more-link
 						display: block
 					a.active
 						color: $link-color
+						+box-shadow(none)
 					a:hover
 						color: $link-color
 					.dropdown-menu
@@ -607,7 +626,7 @@ a.more-link
 					display: block
 					width: 100%
 	.hr
-		margin-left: 20px
+		//margin-left: 20px
 		float: left
 	#footnav
 		ul.nav
@@ -738,11 +757,12 @@ a.more-link
 			width: 100%
 			.wrap
 				padding: 0
-				.jumbo
-					padding-left: 40px
-					padding-right: 40px
-					margin-left: -40px
-					margin-right: -40px
+				/*
+					.jumbo
+						padding-left: 40px
+						padding-right: 40px
+						margin-left: -40px
+						margin-right: -40px
 	.header
 		.nav
 			width: 100%
@@ -792,11 +812,12 @@ a.more-link
 			width: 100%
 			.wrap
 				padding: 0
-				.jumbo
-					padding-right: 40px
-					padding-left: 40px
-					margin-left: -40px
-					margin-right: -40px
+				/*
+					.jumbo
+						padding-right: 40px
+						padding-left: 40px
+						margin-left: -40px
+						margin-right: -40px
 	.header
 		.nav
 			width: 100%
@@ -856,25 +877,23 @@ a.more-link
 		text-align: center
 	h3
 		line-height: 1.5em
+		margin: 30px 0
 
 @media (max-width: 1024px)
-	#wrapper #page .wrap .jumbo
-		padding: 0
-		margin: 0
+	/*
+		#wrapper #page .wrap .jumbo
+			padding: 0
+			margin: 0
 	#logo
 		width: 100%
-		h1
+		h3
 			margin: 0 auto
 
 @media (max-width: 979px) and (min-width: 768px)
 	.header
-		.span3
-			width: 100%
-		.span9
-			width: inherit
 		#logo
 			width: 100%
-			h1
+			h3
 				margin: 0 auto
 		.navbar
 			ul.nav
@@ -892,9 +911,6 @@ a.more-link
 					padding: 0
 					> a
 						padding: 7px 31px 30px 0 !important
-
-/* Profile
-.profile
 
 ul.checklist
 	&.fin
@@ -1012,3 +1028,8 @@ div.livehelp-container
 
 .fb-comments > span
 	width: 100% !important
+
+@import 1200min
+@import 768min-979max
+@import 767max
+@import 480max
