@@ -31,15 +31,19 @@ class PagesController extends Shark_Controller_Action {
 	}
 
 	public function viewAction() {
-		$script = implode('/', array($this->_path, $this->getRequest()->getParam($this->_param, null)));
-		if (APPLICATION_ENV === 'production') {
-			if (($content = $this->cache->load($this->_tag)) === false) {
-				$content = $this->view->render('pages' . DS . $script . '.phtml');
-				$this->cache->save($content, $this->_tag);
+		try {
+			$script = implode('/', array($this->_path, $this->getRequest()->getParam($this->_param, null)));
+			if (APPLICATION_ENV === 'production') {
+				if (($content = $this->cache->load($this->_tag)) === false) {
+					$content = $this->view->render('pages' . DS . $script . '.phtml');
+					$this->cache->save($content, $this->_tag);
+				}
+				$this->view->content = $content;
+			} else {
+				$this->view->content = $this->view->render('pages'. DS . $script . '.phtml');
 			}
-			$this->view->content = $content;
-		} else {
-			$this->view->content = $this->view->render('pages'. DS . $script . '.phtml');
+		} catch (Exception $e) {
+			var_dump($e);exit;
 		}
 	}
 }
