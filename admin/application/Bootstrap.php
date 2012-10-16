@@ -128,6 +128,22 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     // @codingStandardsIgnoreEnd
 
     /**
+     * Initialize date.
+     *
+     * @return void
+     */
+    // @codingStandardsIgnoreStart
+    protected function _initDate()
+    {
+        Zend_Date::setOptions(
+            array(
+                'format_type' => 'php',
+            )
+        );
+    }
+    // @codingStandardsIgnoreEnd
+
+    /**
      * Initialize plugins.
      *
      * @return void
