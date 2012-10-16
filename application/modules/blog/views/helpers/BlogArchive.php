@@ -56,7 +56,12 @@ class Blog_View_Helper_BlogArchive extends Zend_View_Helper_Abstract
         $output .= '<ul class="nav">';
         foreach ($blogArchive as $archive) {
             $output .= '<li>';
-            $output .= '<a href="' . $this->view->url(array('year' => $archive['year']), 'blog') . '">' . $archive['year'] . '</a>';
+            $output .= '<a href="' . $this->view->url(array('year' => $archive['year']), 'blog') . '">';
+            $output .= $archive['year'];
+            if ($showPosts) {
+                $output .= ' (' . $archive['posts'] . ')';
+            }
+            $output .= '</a>';
             $output .= '</li>';
         }
         $output .= '</ul>';

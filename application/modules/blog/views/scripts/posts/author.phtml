@@ -46,14 +46,8 @@ $this->minifyHeadLink()->appendAlternate($this->absoluteUrl($this->url(array('us
 		</div>
 	</div>
 </div>
-<div class="span9 content left" id="blog-list">
-	<? if ($this->author->posts->count()) : ?>
-	<?= $this->partialLoop('posts/_intro.phtml', $this->author->posts) ?>
-	<? endif ?>
-</div>
-<? else : ?>
-<? endif ?>
 <div class="span3 sidebar right">
+	<h3>Autores</h3>
 	<ul>
 	<? foreach ($this->authors as $author) : ?>
 		<li>
@@ -64,4 +58,18 @@ $this->minifyHeadLink()->appendAlternate($this->absoluteUrl($this->url(array('us
 	<? endforeach ?>
 	</ul>
 	<?= $this->blogMenu($this->categories) ?>
+	<?= $this->blogArchive(true) ?>
 </div>
+<div class="span9 content left" id="blog-list">
+	<? if ($this->author->posts->count()) : ?>
+	<?= $this->partialLoop('posts/_intro.phtml', $this->author->posts) ?>
+	<? endif ?>
+</div>
+<? else : ?>
+<div class="alert alert-error">
+	<a href="#" class="close" data-dismiss="alert">x</a>
+	<h3 class="alert-heading">
+		Error
+	</h3>
+	<p>No existe un autor con el nombre indicado.</p>
+<? endif ?>

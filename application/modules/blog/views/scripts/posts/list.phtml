@@ -20,11 +20,12 @@ foreach ($this->authors as $author) {
 		<h2>Lorem ipsum dolor sit amet.</h2>
 	</div>
 </div>
-<div class="span9 content left" id="blog-list">
+<div class="span3 sidebar left">
+	<h3>Categorías</h3>
+	<?= $this->blogMenu($this->categories) ?>
+	<?= $this->blogArchive(true) ?>
+</div>
+<div class="span9 content right" id="blog-list">
 	<?= $this->partialLoop('posts/_intro.phtml', $this->posts) ?>
 	<?= $this->paginationControl($this->posts, 'Sliding', 'shared/pagination.phtml') ?>
-</div>
-<div class="span3 sidebar right">
-	<?= $this->blogMenu($this->categories) ?>
-	<?= $this->blogArchive() ?>
 </div>

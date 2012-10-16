@@ -38,13 +38,15 @@ $this->partialLoop()->setObjectKey('post');
 		<h2><?= $this->category->description ?></h2>
 	</div>
 </div>
-<div class="span9 content left" id="blog-list">
+<div class="span3 sidebar left">
+	<h3>Categorías</h3>
+	<?= $this->blogMenu($this->categories) ?>
+	<?= $this->blogArchive(true) ?>
+</div>
+<div class="span9 content right" id="blog-list">
 	<? if ($this->category->posts->count()) : ?>
 	<?= $this->partialLoop('posts/_intro.phtml', $this->category->posts) ?>
 	<? endif ?>
 </div>
 <? else : ?>
 <? endif ?>
-<div class="span3 sidebar right">
-	<?= $this->blogMenu($this->categories) ?>
-</div>
