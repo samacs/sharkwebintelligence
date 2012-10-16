@@ -72,10 +72,12 @@ class Shark_View extends Zend_View
         $this->headTitle()->setSeparator(' - ');
 
         // Links
+        /*
         if ($site->bootstrap) {
             $this->minifyHeadLink()->appendStylesheet($this->baseUrl('/css/bootstrap.min.css'));
             $this->minifyHeadLink()->appendStylesheet($this->baseUrl('/css/bootstrap-responsive.min.css'));
         }
+        */
         $this->minifyHeadLink()->appendStylesheet($this->baseUrl('/js/prettyPhoto/jquery.prettyPhoto.css'));
         $this->minifyHeadLink()->appendStylesheet($this->baseUrl('/skins/' . $site->skin . '/css/screen.css'), array('media' => 'screen, projection'));
         $this->minifyHeadLink(
