@@ -154,4 +154,80 @@ class Admin_PostsController extends Shark_Controller_Action_Scaffold
         );
         $this->scaffold($this->getModel(), $fields, $options);
     }
+
+    /**
+     * Store the post to the search index.
+     *
+     * @param Zend_Form $form Form object.
+     * @param int       $id   Post id.
+     *
+     * @return boolean
+     */
+    public function afterCreate(Zend_Form $form, $id)
+    {
+        $this->index->addDocument($this->_getPostDocument($id));
+        $this->index->commit();
+    }
+
+    /**
+     * Store the post to the search index.
+     *
+     * @param Zend_Form $form Form object.
+     * @param int       $id   Post id.
+     *
+     * @return boolean
+     */
+    public function afterUpdate(Zend_Form $form, $id)
+    {
+        $term = new Zend_Search_Lucene_Index_Term($id, 'document_id');
+        foreach ($this->index->termDocs($term) as $id) {
+            $this->index->delete($id);
+        }
+        $document = $this->_getPostDocument($id);
+        $this->index->addDocument($document);
+        $this->index->commit();
+        return true;
+    }
+
+    /**
+     * Gets a document for a blog post.
+     *
+     * @param int $id Post id.
+     *
+     * @return Shark_Search_Document_Post
+     */
+    private function _getPostDocument($id)
+    {
+        $post = $this->getModel()->find($id)->current();
+        $created = new Zend_Date($post->created_at, 'es_MX');
+        $modified = new Zend_Date($post->modified_at, 'es_MX');
+        $year = $created->toString(Zend_Date::YEAR);
+        $month = $created->toString(Zend_Date::MONTH);
+        $day = $created->toString(Zend_Date::DAY);
+        $category = $this->getModel('Categories')->find($post->category_id)->current()->alias;
+        $author = $this->getModel('Users')->find($post->user_id)->current()->name;
+        $alias = $post->alias;
+        $url = sprintf('/blog/%s/%d/%d/%d/%s', $category, $year, $month, $day, $alias);
+        $format = sprintf(
+            '%s, %s %s %s',
+            Zend_Date::WEEKDAY,
+            Zend_Date::DAY,
+            Zend_Date::MONTH_NAME,
+            Zend_Date::YEAR
+        );
+        $created = $created->toString();
+        if ($modified) {
+            $modified = $modified->toString();
+        }
+        $document = new stdClass();
+        $document->document_id = $id;
+        $document->url = $url;
+        $document->created = $created;
+        $document->title = $post->title;
+        $document->intro = strip_tags($post->intro);
+        $document->author = $author;
+        $document->content = strip_tags($post->full);
+        $document->modified = $modified;
+        return new Shark_Search_Document_Post($document);
+    }
 }

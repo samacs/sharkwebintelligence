@@ -65,6 +65,8 @@ class Shark_Controller_Action_Abstract extends Zend_Controller_Action
 
     protected $user = null;
 
+    protected $index = null;
+
     /**
      * Initialize needed variables.
      *
@@ -77,6 +79,15 @@ class Shark_Controller_Action_Abstract extends Zend_Controller_Action
             $this->user = unserialize($auth->getIdentity());
         }
         $this->assign(array('user' => $this->user));
+        if (defined('ROOT_PATH')) {
+            $path = ROOT_PATH . DS . 'data' . DS . 'indexes' . DS . 'blog';
+        } else {
+            $path = APPLICATION_PATH . DS . '..' . DS . 'data' . DS . 'indexes' . DS . 'blog';
+        }
+        if (!file_exists($path)) {
+            mkdir($path, true, 0777);
+        }
+        $this->index = Zend_Search_Lucene::create($path);
     }
 
     /**

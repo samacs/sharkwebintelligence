@@ -1,6 +1,7 @@
 data/logs/*
 data/sessions/*
 data/cache/*
+data/indexes/*
 public/cached/*
 library/Zend
 /.htaccess
