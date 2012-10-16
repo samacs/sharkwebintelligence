@@ -10,12 +10,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	protected function _initCache() {
 		$frontendOptions = array(
 			'lifetime' => 7200,
+			'debug_header' => true,
 			'automatic_serialization' => true,
 		);
 		$backendOptions = array(
 			'cache_dir' => APPLICATION_PATH . DS . '..' . DS . 'data' . DS . 'cache',
 		);
-		$cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
+		$cache = Zend_Cache::factory('Page', 'File', $frontendOptions, $backendOptions);
 		Zend_Registry::set('Zend_Cache', $cache);
 	}
 
