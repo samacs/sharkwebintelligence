@@ -49,7 +49,7 @@ class Blog_PostsController extends Shark_Controller_Action
     /**
      * @var int $page Starting page.
      */
-    protected $page = 0;
+    protected $page = 1;
 
     /**
      * Initialize variables.
@@ -82,14 +82,27 @@ class Blog_PostsController extends Shark_Controller_Action
         $year = $request->getParam('year', $now->toString('YYYY'));
         $month = $request->getParam('month', $now->toString('MM'));
         $day = $request->getParam('day', $now->toString('dd'));
-        $model = new Model_Posts();
-        $posts = $model->getPosts($year, $month, $day, $this->limit, $this->page, null, array('created_at DESC'));
-        $usersModel = new Model_Users();
+        $tag = sprintf('blog_%d_%d_%d_page_%d', $year, $month, $day, $this->page);
+        try {
+            if ($this->cache && ($contents = $this->cache->load($tag))) {
+                list($posts, $authors) = $contents;
+            } else {
+                $model = new Model_Posts();
+                $posts = $model->getPosts($year, $month, $day, $this->limit, $this->page, null, array('created_at DESC'));
+                $usersModel = new Model_Users();
+                $authors = $usersModel->findAll();
+                if ($this->cache) {
+                    $this->cache->save(array($posts, $authors), $tag);
+                }
+            }
+        } catch (Exception $e) {
+            var_dump($e);exit;
+        }
         $this->view->assign(
             array(
                 'posts' => $posts,
                 'now' => $now,
-                'authors' => $usersModel->findAll(),
+                'authors' => $authors,
             )
         );
     }
