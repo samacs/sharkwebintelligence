@@ -42,15 +42,19 @@ $this->minifyHeadLink()->appendAlternate($this->absoluteUrl($this->url(array(), 
 		</div>
 	</article>
 </div>
-<div id="services">
-	<!--<div class="span12 heading">
-		<h3>Nuestros servicios</h3>
-	</div>-->
-	<?= $this->services(null, 4) ?>
-	<div class="span3 offset9">
-		<p class="pull-right">
-			<a href="<?= $this->url(array('page' => 'servicios',), 'pages') ?>" class="more-link" title="<?= $this->translate('services_full_list') ?>"><?= $this->translate('services_full_list') ?></a>
-		</p>
+<div class="span12">
+	<div class="row">
+		<div id="services">
+			<!--<div class="span12 heading">
+				<h3>Nuestros servicios</h3>
+			</div>-->
+			<?= $this->services(null, 4) ?>
+			<div class="span3 offset9">
+				<p class="pull-right">
+					<a href="<?= $this->url(array('page' => 'servicios',), 'pages') ?>" class="more-link" title="<?= $this->translate('services_full_list') ?>"><?= $this->translate('services_full_list') ?></a>
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
 <!--<div id="clients">
