@@ -67,12 +67,14 @@ class Model_Posts
                 'p' => 'blog_posts',
             ),
             array(
+                'date_raw' => 'p.created_at',
                 'month' => new Zend_Db_Expr('DATE_FORMAT(p.created_at, "%M")'),
                 'year' => new Zend_Db_Expr('DATE_FORMAT(p.created_at, "%Y")'),
+                'date' => new Zend_Db_Expr('CONCAT(DATE_FORMAT(p.created_at, "%Y"), " ", DATE_FORMAT(p.created_at, "%M"))'),
                 'posts' => new Zend_Db_Expr('COUNT(*)'),
             )
         )
-            ->group(new Zend_Db_Expr('DATE_FORMAT(p.created_at, "%Y")'))
+            ->group('date')
             ->order('p.created_at DESC')
             ->query()
             ->fetchAll();
