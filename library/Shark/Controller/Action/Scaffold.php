@@ -499,8 +499,8 @@ abstract class Shark_Controller_Action_Scaffold extends Shark_Controller_Action
         /**
          * Handle sorting by modifying SQL and building header sorting links.
          */
-        $sortField  = $this->_getParam('orderby');
-        $sortMode   = $this->_getParam('mode') == 'desc' ? 'desc' : 'asc';
+        $sortField  = $this->_getParam('orderby', 'created_at');
+        $sortMode   = $this->_getParam('mode', 'desc') == 'desc' ? 'desc' : 'asc';
         if (!$sortField && $defSortField) {
             $sortField  = $defSortField;
             $sortMode   = $this->fields[$sortField]['sort']['default'] == 'desc' ? 'desc' : 'asc';
@@ -1123,7 +1123,7 @@ abstract class Shark_Controller_Action_Scaffold extends Shark_Controller_Action
                         Zend_Db_Table::getDefaultAdapter()->commit();
                         $this->_helper->FlashMessenger($this->_getActionMessage(self::ACTION_UPDATE, self::MSG_OK));
 
-                        if ($this->afterUpdate($form)) {
+                        if ($this->afterUpdate($form, $pkValue)) {
                             //var_dump($this->view->url(array(), $this->view->indexRoute));exit;
                             //$this->_redirect($this->view->url(array(), $this->view->indexRoute));
                             $this->gotoRoute($this->view->indexRoute);
@@ -2424,10 +2424,11 @@ abstract class Shark_Controller_Action_Scaffold extends Shark_Controller_Action
      * The function called every time AFTER entity has been updated.
      *
      * @param Zend_Form $form Submitted form object
+     * @param int       $id   Row id.
      *
      * @return boolean True if automatic redirect must happen and false if user will redirect manually
      */
-    protected function afterUpdate(Zend_Form $form)
+    protected function afterUpdate(Zend_Form $form, $id)
     {
         return true;
     }
