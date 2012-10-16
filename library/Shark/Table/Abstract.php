@@ -217,7 +217,7 @@ abstract class Shark_Table_Abstract extends Zend_Db_Table_Abstract
         $info = $this->info('cols');
         if (in_array('user_id', $info)) {
             $auth = Zend_Auth::getInstance();
-            if (!($user = $auth->getIdentity())) {
+            if (!($user = unserialize($auth->getIdentity()))) {
                 throw new Exception("This row can not be saved if there's no logged in user");
             }
             $data['user_id'] = $user->id;
