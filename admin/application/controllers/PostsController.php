@@ -156,40 +156,6 @@ class Admin_PostsController extends Shark_Controller_Action_Scaffold
     }
 
     /**
-     * Store the post to the search index.
-     *
-     * @param Zend_Form $form Form object.
-     * @param int       $id   Post id.
-     *
-     * @return boolean
-     */
-    public function afterCreate(Zend_Form $form, $id)
-    {
-        $this->index->addDocument($this->_getPostDocument($id));
-        $this->index->commit();
-    }
-
-    /**
-     * Store the post to the search index.
-     *
-     * @param Zend_Form $form Form object.
-     * @param int       $id   Post id.
-     *
-     * @return boolean
-     */
-    public function afterUpdate(Zend_Form $form, $id)
-    {
-        $term = new Zend_Search_Lucene_Index_Term($id, 'document_id');
-        foreach ($this->index->termDocs($term) as $id) {
-            $this->index->delete($id);
-        }
-        $document = $this->_getPostDocument($id);
-        $this->index->addDocument($document);
-        $this->index->commit();
-        return true;
-    }
-
-    /**
      * Gets a document for a blog post.
      *
      * @param int $id Post id.
