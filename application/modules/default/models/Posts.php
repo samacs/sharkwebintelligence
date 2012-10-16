@@ -55,6 +55,31 @@ class Model_Posts
     }
 
     /**
+     * Get the blog archive by year.
+     *
+     * @return Zend_Db_Table_Rowset_Abstract
+     */
+    public function getArchive()
+    {
+        $select = $this->table->getAdapter()->select();
+        $result = $select->from(
+            array(
+                'p' => 'blog_posts',
+            ),
+            array(
+                'month' => new Zend_Db_Expr('DATE_FORMAT(p.created_at, "%M")'),
+                'year' => new Zend_Db_Expr('DATE_FORMAT(p.created_at, "%Y")'),
+                'posts' => new Zend_Db_Expr('COUNT(*)'),
+            )
+        )
+            ->group(new Zend_Db_Expr('DATE_FORMAT(p.created_at, "%Y")'))
+            ->order('p.created_at DESC')
+            ->query()
+            ->fetchAll();
+        return $result;
+    }
+
+    /**
      * Gets the post by date and (or) title alias.
      *
      * @param int    $year  Starting year.
