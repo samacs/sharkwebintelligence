@@ -156,8 +156,7 @@ class Form_Contact extends Zend_Form
                     'StringTrim',
                     'StripTags',
                 ),
-                'rows' => 3,
-                'cols' => 25,
+                'class' => 'span4',
             )
         );
 

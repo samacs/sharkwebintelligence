@@ -9330,6 +9330,11 @@ a.author {
     margin: 0;
     padding: 0;
   }
+
+  /* line 16, ../sass/_768min-979max.sass */
+  #form-contact input[type="text"], #form-contact textarea {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   /* line 4, ../sass/_767max.sass */
@@ -9366,6 +9371,11 @@ a.author {
   footer #copyright, footer #footnav {
     padding: 0 20px;
   }
+
+  /* line 22, ../sass/_767max.sass */
+  #form-contact input[type="text"], #form-contact textarea {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   /* line 4, ../sass/_480max.sass */
@@ -9376,5 +9386,14 @@ a.author {
   /* line 6, ../sass/_480max.sass */
   #services {
     padding: 30px 0;
+  }
+
+  /* line 8, ../sass/_480max.sass */
+  #form-contact {
+    padding: 20px 40px 20px 25px;
+  }
+  /* line 10, ../sass/_480max.sass */
+  #form-contact input[type="text"], #form-contact textarea {
+    width: 100%;
   }
 }
