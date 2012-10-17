@@ -26,7 +26,9 @@ $link = array(
 				</a>
 			</h3>
 			<h4>
-				<a href="<?= $this->url(array('category_alias' => $this->post->category->alias), 'blog-category') ?>" title="<?= $this->post->category->title ?>"><?= $this->post->category->title ?></a>
+				<a href="<?= $this->url(array('category_alias' => $this->post->category->alias), 'blog-category') ?>" title="<?= $this->post->category->title ?>">
+					<?= $this->post->category->title ?>
+				</a>
 			</h4>
 		</hgroup>
 	</header>
@@ -39,6 +41,11 @@ $link = array(
 			<a href="<?= $this->url(array('username' => $this->post->author->username), 'blog-author') ?>" rel="author" title="<?= $this->post->author->name ?>" itemprop="name" class="author">
 				<?= $this->post->author->name ?>
 			</a>
+			<? if ($this->post->show_readmore) : ?>
+			<a href="<?= $this->url($link, 'blog-post') ?>" title="Leer m&aacute;s" class="readmore">
+				Leer m&aacute;s &raquo;
+			</a>
+			<? endif ?>
 		</div>
 	</footer>
 </article>

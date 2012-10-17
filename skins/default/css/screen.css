@@ -9236,31 +9236,42 @@ div.livehelp-container a:hover {
   float: right;
 }
 /* line 1000, ../sass/screen.sass */
+#blog-list .readmore, #blog-post .readmore {
+  margin: 0 10px;
+  display: inline-block;
+  border-bottom: 1px dashed #cccccc;
+  padding-bottom: 3px;
+}
+/* line 1005, ../sass/screen.sass */
+#blog-list .readmore:hover, #blog-post .readmore:hover {
+  text-decoration: none;
+}
+/* line 1007, ../sass/screen.sass */
 #blog-list .pagination, #blog-post .pagination {
   float: left;
   width: 100%;
 }
 
-/* line 1004, ../sass/screen.sass */
+/* line 1011, ../sass/screen.sass */
 .author .avatar {
   float: left;
   margin-right: 10px;
 }
-/* line 1008, ../sass/screen.sass */
+/* line 1015, ../sass/screen.sass */
 .author .bio h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
-/* line 1011, ../sass/screen.sass */
+/* line 1018, ../sass/screen.sass */
 .author .bio p {
   margin-bottom: 10px;
   padding-bottom: 0;
 }
-/* line 1014, ../sass/screen.sass */
+/* line 1021, ../sass/screen.sass */
 .author .bio .links {
   text-align: right;
 }
-/* line 1016, ../sass/screen.sass */
+/* line 1023, ../sass/screen.sass */
 .author .bio .links a {
   margin-bottom: 10px;
   text-decoration: none;
@@ -9271,14 +9282,14 @@ div.livehelp-container a:hover {
   margin-right: 10px;
 }
 
-/* line 1025, ../sass/screen.sass */
+/* line 1032, ../sass/screen.sass */
 a.author {
   background: transparent url(../images/bg-author.png) no-repeat top left;
   padding-left: 20px;
   height: 16px;
 }
 
-/* line 1030, ../sass/screen.sass */
+/* line 1037, ../sass/screen.sass */
 #fb_comments,
 .fb_iframe_widget,
 .fb_iframe_widget[style],
@@ -9287,7 +9298,7 @@ a.author {
   width: 100% !important;
 }
 
-/* line 1037, ../sass/screen.sass */
+/* line 1044, ../sass/screen.sass */
 .fb-comments > span {
   width: 100% !important;
 }

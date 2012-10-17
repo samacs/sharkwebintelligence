@@ -138,6 +138,24 @@ class Admin_PostsController extends Shark_Controller_Action_Scaffold
                 ),
                 'fieldType' => 'checkbox',
             ),
+            'show_readmore' => array(
+                'title' => 'BLOG_POSTS_FORM_SHOW_READMORE_LABEL',
+                'validators' => array(
+                    array(
+                        'InArray',
+                        false,
+                        array(
+                            'SHARK_YES' => 1,
+                            'SHARK_NO' => 0,
+                        ),
+                    ),
+                ),
+                'filters' => array(
+                    'StripTags',
+                    'StringTrim',
+                ),
+                'fieldType' => 'checkbox',
+            ),
             'created_at' => array(
                 'title' => 'SHARK_CREATED_AT',
                 'hide' => 'create,edit',
