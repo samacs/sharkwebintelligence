@@ -6,6 +6,8 @@
 		});
 	});
 
+	$('a[rel="prettyPhoto"]').prettyPhoto();
+
 	// Equal heights
 	$.fn.equalHeight = function() {
 		var maxHeight = Math.max.apply(null, this.map(function() {
