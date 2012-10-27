@@ -55,6 +55,7 @@ abstract class Shark_Form_Abstract extends Zend_Form
         $this->addPrefixPath('Shark_Form_Element', 'Shark/Form/Element', 'element');
         $this->addElementPrefixPath('Shark_Filter', 'Shark/Filter', 'filter');
         $this->addElementPrefixPath('Shark_Validate', 'Shark/Validate', 'validate');
+
         parent::__construct($options);
     }
 }

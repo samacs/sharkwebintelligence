@@ -79,4 +79,18 @@ class Admin_Form_User_Login extends Admin_Form_User
             )
         );
     }
+
+    /**
+     * Logout action.
+     *
+     * @return void
+     */
+    public function logoutAction()
+    {
+        $auth = Zend_Auth::getInstance();
+        if ($auth->hasIdentity()) {
+            $auth->clearIdentity();
+        }
+        return $this->_redirect('/');
+    }
 }
