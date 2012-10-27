@@ -248,10 +248,15 @@ $popoverArrowOuterColor:  rgba(0,0,0,.25) !default;
 
 // Default 940px grid
 // -------------------------
-$gridColumns:             12 !default;
-$gridColumnWidth:         60px !default;
-$gridGutterWidth:         20px !default;
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
+//$gridColumns:             12 !default;
+//$gridColumnWidth:         60px !default;
+//$gridGutterWidth:         20px !default;
+//$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
+
+$gridColumns: 12 !default;
+$gridColumnWidth: 64.167px;
+$gridGutterWidth: 10px;
+$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
 // 1200px min
 $gridColumnWidth1200:     70px !default;
@@ -276,3 +281,5 @@ $fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200
 // 768px-979px
 $fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768) !default;
 $fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768) !default;
+
+@import "../variables";
