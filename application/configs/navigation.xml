@@ -230,13 +230,13 @@
 				</all_dental>
 			</pages>
 		</portfolio>
-		<!--
+		
 		<blog>
 			<label>Blog</label>
 			<title>Blog</title>
 			<route>blog</route>
 		</blog>
-		-->
+		
 		<contact>
 			<label>Contacto</label>
 			<title>Contáctenos</title>
