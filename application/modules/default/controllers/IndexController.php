@@ -53,7 +53,7 @@ class IndexController extends Shark_Controller_Action
         $slide->order = 0;
         $slide->image = $this->view->baseUrl('/img/slides/websites.jpg');
         $slide->title = 'Web Hosting';
-        $slide->link = $this->view->url(array('service' => 'hospedaje-web'), 'services');
+        $slide->link = $this->view->url(array('service' => 'websites'), 'services');
         $slides[] = $slide;
         $slide = new stdClass();
         $slide->order = 1;
